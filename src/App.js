@@ -1,16 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import cabin from './assets/img/portfolio/cabin.png';
+import cake from './assets/img/portfolio/cake.png';
+import circus from './assets/img/portfolio/circus.png';
+import game from './assets/img/portfolio/game.png';
+import safe from './assets/img/portfolio/safe.png';
+import submarine from './assets/img/portfolio/submarine.png';
+import logo from './assets/img/portfolio/logo.png';
+
 
 // import 'jquery';
 
-function App() {
+export default function App() {
   return (
-    <div>
+    <div className="body">
       <div id="page-top">
         {/* <!-- Navigation--> */}
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
             <div class="container">
-                <img class="logo" src="assets/img/portfolio/logo.png" alt="" />
+                <img className="logo" src={logo} alt="NO IMG" />
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">Casa Vital</a>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -51,7 +58,7 @@ function App() {
             <div class="container">
                 {/* <!-- Portfolio Section Heading--> */}
                 <h2 class="page-section-heading text-center text-secondary mb-0">Our Rooms</h2>
-                {/* <!-- Icon Divider--> */}
+               {/* Icon Divider */}
                 <div class="divider-custom">
                     {/* <!-- <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
@@ -65,7 +72,7 @@ function App() {
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="/assets/img/portfolio/cabin.png" alt="" />
+                            <img class="img-fluid" src= {cabin} alt="CABIN" />
                         </div>
                     </div>
                     {/* <!-- Portfolio Item 2--> */}
@@ -74,7 +81,7 @@ function App() {
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="" />
+                            <img class="img-fluid" src={cake} alt="NOIMG" />
                         </div>
                     </div>
                     {/* <!-- Portfolio Item 3--> */}
@@ -83,7 +90,7 @@ function App() {
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="" />
+                            <img class="img-fluid" src={circus} alt="NOIMG" />
                         </div>
                     </div>
                     {/* <!-- Portfolio Item 4--> */}
@@ -92,7 +99,7 @@ function App() {
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/game.png" alt="" />
+                            <img class="img-fluid" src={game} alt="NOIMG" />
                         </div>
                     </div>
                     {/* <!-- Portfolio Item 5--> */}
@@ -101,7 +108,7 @@ function App() {
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="" />
+                            <img class="img-fluid" src={safe} alt="NOIMG" />
                         </div>
                     </div>
                     {/* <!-- Portfolio Item 6--> */}
@@ -110,7 +117,7 @@ function App() {
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="" />
+                            <img class="img-fluid" src={submarine} alt="NOIMG" />
                         </div>
                     </div>
                 </div>
@@ -159,7 +166,7 @@ function App() {
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         {/* <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.--> */}
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <form id="contactForm" name="sentMessage"  action="./assets/mail/contact_me.php" method="post" novalidate >
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Name</label>
@@ -255,7 +262,7 @@ function App() {
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     {/* <!-- Portfolio Modal - Image--> */}
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="" />
+                                    <img class="img-fluid rounded mb-5" src={cabin} alt="asd" />
                                     {/* <!-- Portfolio Modal - Text--> */}
                                     <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" data-dismiss="modal">
@@ -289,7 +296,7 @@ function App() {
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     {/* <!-- Portfolio Modal - Image--> */}
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="" />
+                                    <img class="img-fluid rounded mb-5" src={cake} alt="" />
                                     {/* <!-- Portfolio Modal - Text--> */}
                                     <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" data-dismiss="modal">
@@ -323,7 +330,7 @@ function App() {
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     {/* <!-- Portfolio Modal - Image--> */}
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="" />
+                                    <img class="img-fluid rounded mb-5" src={circus} alt="" />
                                     {/* <!-- Portfolio Modal - Text--> */}
                                     <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" data-dismiss="modal">
@@ -357,7 +364,7 @@ function App() {
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     {/* <!-- Portfolio Modal - Image--> */}
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="" />
+                                    <img class="img-fluid rounded mb-5" src={game} alt="" />
                                     {/* <!-- Portfolio Modal - Text--> */}
                                     <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" data-dismiss="modal">
@@ -391,7 +398,7 @@ function App() {
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     {/* <!-- Portfolio Modal - Image--> */}
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="" />
+                                    <img class="img-fluid rounded mb-5" src={safe} alt="" />
                                     {/* <!-- Portfolio Modal - Text--> */}
                                     <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" data-dismiss="modal">
@@ -425,7 +432,7 @@ function App() {
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     {/* <!-- Portfolio Modal - Image--> */}
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="" />
+                                    <img class="img-fluid rounded mb-5" src={submarine} alt="" />
                                     {/* <!-- Portfolio Modal - Text--> */}
                                     <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" data-dismiss="modal">
@@ -453,5 +460,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
