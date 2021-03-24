@@ -6,7 +6,7 @@ exports.handler = function(event, context, callback) {
 
     let transporter = nodemailer.createTransport({
         host:'gmail',
-        // port: 465,
+        port: 465,
         auth:{
          user: "nirargil5@gmail.com",
          pass: "nir12345",
