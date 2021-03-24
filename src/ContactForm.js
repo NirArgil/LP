@@ -3,10 +3,8 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button"
 import FormControl from "@material-ui/core/FormControl"
 import Grid from "@material-ui/core/Grid"
-import Icon from '@material-ui/core/Icon';
 
 import axios from 'axios';
-
 
 const ContactForm = () => {
     const [data, setData] = useState({name: '', email: '', phone: '', message: '', sent: false, buttonText: 'Submit', err: ''})
