@@ -21,7 +21,10 @@ exports.handler = function(event, context, callback) {
         to: "nirargil5@gmail.com",
         subject: `Contact Form`,
         html: `
-            <h3>Email from ${data.name} ${data.email}<h3>
+            <h3>Email from ${data.name}, <br>
+            Email: ${data.email}<h3>.
+            Phone num: ${data.phone} <br>
+            Message:
             <p>${data.message}<p>
             `
     }, function(error, info) {

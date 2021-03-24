@@ -7,10 +7,8 @@ import safe from './assets/img/portfolio/safe.png';
 import submarine from './assets/img/portfolio/submarine.png';
 import logo from './assets/img/portfolio/logo.png';
 import React from 'react';
-
-
 import ContactForm from './ContactForm';
-// import * as action from "./assets/mail/contact_me.php";
+
 // import 'jquery';
 
 export default function App() {
@@ -158,11 +156,11 @@ export default function App() {
         <section class="page-section" id="contact">
             <div class="container">
                 {/* <!-- Contact Section Heading--> */}
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+                <h2 class="page-section-heading text-center text-secondary mb-0">Contact Us</h2>
                 {/* <!-- Icon Divider--> */}
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div id="contact"><i class="fas fa-phone-alt"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
 
@@ -192,7 +190,7 @@ export default function App() {
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="mb-4">Around the Web</h4>
                         <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        {/* <!-- <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a> --> */}
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-airbnb fa-2x"></i></a> 
                         <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
                         {/* <!-- <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a> --> */}
                     </div>
