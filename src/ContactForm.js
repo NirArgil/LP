@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 // import TextField from "@material-ui/core/TextField";
 // import Button from "@material-ui/core/Button"
 // import FormControl from "@material-ui/core/FormControl"
 // import Grid from "@material-ui/core/Grid"
-import axios from 'axios';
+// import axios from 'axios';
 
 const ContactForm = () => {
     // const [data, setData] = useState({name: '', email: '', message: '', sent: false, buttonText: 'Submit', err: ''})
