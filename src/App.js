@@ -6,7 +6,7 @@ import game from './assets/img/portfolio/game.png';
 import safe from './assets/img/portfolio/safe.png';
 import submarine from './assets/img/portfolio/submarine.png';
 import logo from './assets/img/portfolio/logo.png';
-import React, { Component } from 'react';
+import React from 'react';
 
 
 import ContactForm from './ContactForm';
