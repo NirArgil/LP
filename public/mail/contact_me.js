@@ -1,3 +1,5 @@
+import '../../public/mail/contact_me.php'
+
 $(function () {
     $(
         "#contactForm input,#contactForm textarea,#contactForm button"
@@ -21,7 +23,7 @@ $(function () {
             $this = $("#sendMessageButton");
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
-                url: "/assets/mail/contact_me.php",
+                url: "../../public/mail/contact_me.php",
                 type: "POST",
                 data: {
                     name: name,

@@ -1,4 +1,5 @@
 <?php
+
 // Check for empty fields
 if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
   http_response_code(500);
@@ -16,6 +17,11 @@ $subject = "Website Contact Form:  $name";
 $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
 $header = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $header .= "Reply-To: $email";	
+
+$success = mail($to, $subject, $body, "From:" $email);
+// mail($to, $subject, $body, $header)){
+//   echo "Sent";
+//   }
 
 if(!mail($to, $subject, $body, $header))
   http_response_code(500);

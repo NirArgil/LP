@@ -35,7 +35,7 @@
           }).toArray()
         );
 
-        $(uniqueForms).bind("submit", function (e) {
+        $(uniqueForms).on("submit", function (e) {
           var $form = $(this);
           var warningsFound = 0;
           var $inputs = $form.find("input,textarea,select").not("[type=submit],[type=image]").filter(settings.options.filter);
@@ -390,7 +390,7 @@
           //                                                    VALIDATION
           // =============================================================
 
-          $this.bind(
+          $this.on(
             "validation.validation",
             function (event, params) {
 
@@ -413,7 +413,7 @@
             }
           );
 
-          $this.bind(
+          $this.on(
             "getValidators.validation",
             function () {
               return validators;
@@ -423,13 +423,13 @@
           // =============================================================
           //                                             WATCH FOR CHANGES
           // =============================================================
-          $this.bind(
+          $this.on(
             "submit.validation",
             function () {
               return $this.triggerHandler("change.validation", {submitting: true});
             }
           );
-          $this.bind(
+          $this.on(
             [
               "keyup",
               "focus",
@@ -490,7 +490,7 @@
               }
             }
           );
-          $this.bind("validationLostFocus.validation", function () {
+          $this.on("validationLostFocus.validation", function () {
             $controlGroup.removeClass("success");
           });
         });
@@ -691,7 +691,7 @@
 				name: "match",
 				init: function ($this, name) {
 					var element = $this.parents("form").first().find("[name=\"" + $this.data("validation" + name + "Match") + "\"]").first();
-					element.bind("validation.validation", function () {
+					element.on("validation.validation", function () {
 						$this.trigger("change.validation", {submitting: true});
 					});
 					return {"element": element};
@@ -746,7 +746,7 @@
 				name: "maxchecked",
 				init: function ($this, name) {
 					var elements = $this.parents("form").first().find("[name=\"" + $this.attr("name") + "\"]");
-					elements.bind("click.validation", function () {
+					elements.on("click.validation", function () {
 						$this.trigger("change.validation", {includeEmpty: true});
 					});
 					return {maxchecked: $this.data("validation" + name + "Maxchecked"), elements: elements};
@@ -761,7 +761,7 @@
 				name: "minchecked",
 				init: function ($this, name) {
 					var elements = $this.parents("form").first().find("[name=\"" + $this.attr("name") + "\"]");
-					elements.bind("click.validation", function () {
+					elements.on("click.validation", function () {
 						$this.trigger("change.validation", {includeEmpty: true});
 					});
 					return {minchecked: $this.data("validation" + name + "Minchecked"), elements: elements};

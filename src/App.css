@@ -6073,8 +6073,9 @@ a.close.disabled {
   vertical-align: text-top !important;
 }
 header {
-  background-image: url(./assets/img/portfolio/01.jpg);
+  background-image: url(./assets/img/portfolio/p.jpg);
   background-size: cover;
+  height: 750px;
 }
 #about {
   background-image: url(./assets/img/portfolio/001.jpg);
@@ -9999,6 +10000,7 @@ h3 {
 .page-section .page-section-heading {
   font-size: 2.25rem;
   line-height: 2rem;
+  font-weight: 300;
 }
 @media (min-width: 992px) {
   .page-section .page-section-heading {
