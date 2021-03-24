@@ -1,72 +1,72 @@
 import React, { useState } from 'react'
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button"
-import FormControl from "@material-ui/core/FormControl"
-import Grid from "@material-ui/core/Grid"
+// import TextField from "@material-ui/core/TextField";
+// import Button from "@material-ui/core/Button"
+// import FormControl from "@material-ui/core/FormControl"
+// import Grid from "@material-ui/core/Grid"
 import axios from 'axios';
 
 const ContactForm = () => {
-    const [data, setData] = useState({name: '', email: '', message: '', sent: false, buttonText: 'Submit', err: ''})
+    // const [data, setData] = useState({name: '', email: '', message: '', sent: false, buttonText: 'Submit', err: ''})
 
-    const handleChange = (e) => {
-        const {name, value} = e.target
-            setData({
-                ...data,
-                [name]: value
-        })
-    }
+    // const handleChange = (e) => {
+    //     const {name, value} = e.target
+    //         setData({
+    //             ...data,
+    //             [name]: value
+    //     })
+    // }
 
-    const formSubmit = (e) => {
-        e.preventDefault();
+    // const formSubmit = (e) => {
+    //     e.preventDefault();
 
-        setData({
-            ...data,
-            buttonText: 'Sending...'
-        })
+    //     setData({
+    //         ...data,
+    //         buttonText: 'Sending...'
+    //     })
 
-        axios.post('/api/sendmail', data)
-        .then(res => {
-            if(res.data.result !=='success') {
-                setData({
-                    ...data,
-                    buttonText: 'Failed to send',
-                    sent: false,
-                    err: 'fail'
-                })
-                setTimeout(() => {
-                    resetForm()
-                }, 6000)
-            } else {
-                setData({
-                    ...data,
-                    sent: true,
-                    buttonText: 'Sent',
-                    err: 'success'
-                })
-                setTimeout(() => {
-                    resetForm();
-                }, 6000)
-            }
-        }).catch( (err) => {
-            //console.log(err.response.status)
-            setData({
-                ...data,
-                buttonText: 'Failed to send',
-                err: 'fail'
-            })
-        })
-    }
+    //     axios.post('/api/sendmail', data)
+    //     .then(res => {
+    //         if(res.data.result !=='success') {
+    //             setData({
+    //                 ...data,
+    //                 buttonText: 'Failed to send',
+    //                 sent: false,
+    //                 err: 'fail'
+    //             })
+    //             setTimeout(() => {
+    //                 resetForm()
+    //             }, 6000)
+    //         } else {
+    //             setData({
+    //                 ...data,
+    //                 sent: true,
+    //                 buttonText: 'Sent',
+    //                 err: 'success'
+    //             })
+    //             setTimeout(() => {
+    //                 resetForm();
+    //             }, 6000)
+    //         }
+    //     }).catch( (err) => {
+    //         //console.log(err.response.status)
+    //         setData({
+    //             ...data,
+    //             buttonText: 'Failed to send',
+    //             err: 'fail'
+    //         })
+    //     })
+    // }
 
-    const resetForm = () => {
-        setData({
-            name: '',
-            email: '',
-            message: '',
-            sent: false,
-            buttonText: 'Submit',
-            err: ''
-        });
-    }
+    // const resetForm = () => {
+    //     setData({
+    //         name: '',
+    //         email: '',
+    //         message: '',
+    //         sent: false,
+    //         buttonText: 'Submit',
+    //         err: ''
+    //     });
+    // }
 
     return (
        <div> 
@@ -80,7 +80,7 @@ const ContactForm = () => {
                         <input type="email" id="email" name="email" placeholder="Email" required=""/>
                     </div>
                     <div class="form__input">
-                        <textarea id="message" name="message" placeholder="Message" style="height:200px"></textarea>
+                        <textarea id="message" name="message" placeholder="Message"></textarea>
                     </div>
                     <div class="form__input">
                         <input type="submit" id="submit" placeholder="SUBMIT"/>
