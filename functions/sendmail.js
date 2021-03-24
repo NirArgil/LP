@@ -5,11 +5,11 @@ exports.handler = function(event, context, callback) {
     let data = JSON.parse(event.body)
 
     let transporter = nodemailer.createTransport({
-        host:'gmail',
+        host: HOST,
         port: 465,
         auth:{
-         user: "nirargil5@gmail.com",
-         pass: "nir12345",
+         user: process.env.USERNAME,
+         pass: process.env.PASSWORD,
         //  user:[YOUR SMTP SERVER USERNAME],
         //  pass: [YOUR SMTP SERVER PASSWORD]
     }
