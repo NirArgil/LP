@@ -70,24 +70,23 @@ const ContactForm = () => {
 
     return (
        <div> 
-            <FormControl fullWidth={true}>
-                <TextField required label="Full name" variant="filled" id="full-name" name="name" className="form-field" value={data.name} onChange={handleChange} />
-            </FormControl>
-            <FormControl fullWidth={true}>
-                <TextField required label="Email" id="email" name="email" variant="filled" className="form-field" value={data.email} onChange={handleChange} />
-            </FormControl>
-            <FormControl fullWidth={true}>
-                <TextField required label="Message" variant="filled" name="message" multiline={true} rows="10" value={data.message} onChange={handleChange} />
-            </FormControl>
-            <FormControl>
-                <div style={{padding: 20}}>
-                    <Grid container spacing={2}>
-                            <div className="form-submit">
-                                <Button variant="contained" color="primary" onClick={formSubmit}>{data.buttonText}</Button>
-                            </div>
-                        </Grid>
-                </div>
-            </FormControl>
+            <div class="contact__form"> 
+                <form name="form" action="POST" method="POST" data-netlify="true">
+                 <input type='hidden' name='form-name' value='contact' />
+                    <div class="form__input">
+                        <input type="text" id="name" name="name" placeholder="Name" required=""/>
+                    </div>
+                    <div class="form__input">
+                        <input type="email" id="email" name="email" placeholder="Email" required=""/>
+                    </div>
+                    <div class="form__input">
+                        <textarea id="message" name="message" placeholder="Message" style="height:200px"></textarea>
+                    </div>
+                    <div class="form__input">
+                        <input type="submit" id="submit" placeholder="SUBMIT"/>
+                    </div>
+                </form> 
+            </div>
         </div>
     );
 };
