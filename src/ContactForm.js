@@ -1,92 +1,93 @@
-import React from 'react'
-// import TextField from "@material-ui/core/TextField";
-// import Button from "@material-ui/core/Button"
-// import FormControl from "@material-ui/core/FormControl"
-// import Grid from "@material-ui/core/Grid"
-// import axios from 'axios';
+import React, { useState } from 'react'
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button"
+import FormControl from "@material-ui/core/FormControl"
+import Grid from "@material-ui/core/Grid"
+import axios from 'axios';
 
 const ContactForm = () => {
-    // const [data, setData] = useState({name: '', email: '', message: '', sent: false, buttonText: 'Submit', err: ''})
+    const [data, setData] = useState({name: '', email: '', message: '', sent: false, buttonText: 'Submit', err: ''})
 
-    // const handleChange = (e) => {
-    //     const {name, value} = e.target
-    //         setData({
-    //             ...data,
-    //             [name]: value
-    //     })
-    // }
+    const handleChange = (e) => {
+        const {name, value} = e.target
+            setData({
+                ...data,
+                [name]: value
+        })
+    }
 
-    // const formSubmit = (e) => {
-    //     e.preventDefault();
+    const formSubmit = (e) => {
+        e.preventDefault();
 
-    //     setData({
-    //         ...data,
-    //         buttonText: 'Sending...'
-    //     })
+        setData({
+            ...data,
+            buttonText: 'Sending...'
+        })
 
-    //     axios.post('/api/sendmail', data)
-    //     .then(res => {
-    //         if(res.data.result !=='success') {
-    //             setData({
-    //                 ...data,
-    //                 buttonText: 'Failed to send',
-    //                 sent: false,
-    //                 err: 'fail'
-    //             })
-    //             setTimeout(() => {
-    //                 resetForm()
-    //             }, 6000)
-    //         } else {
-    //             setData({
-    //                 ...data,
-    //                 sent: true,
-    //                 buttonText: 'Sent',
-    //                 err: 'success'
-    //             })
-    //             setTimeout(() => {
-    //                 resetForm();
-    //             }, 6000)
-    //         }
-    //     }).catch( (err) => {
-    //         //console.log(err.response.status)
-    //         setData({
-    //             ...data,
-    //             buttonText: 'Failed to send',
-    //             err: 'fail'
-    //         })
-    //     })
-    // }
+        axios.post('/api/sendmail', data)
+        .then(res => {
+            if(res.data.result !=='success') {
+                setData({
+                    ...data,
+                    buttonText: 'Failed to send',
+                    sent: false,
+                    err: 'fail'
+                })
+                setTimeout(() => {
+                    resetForm()
+                }, 6000)
+            } else {
+                setData({
+                    ...data,
+                    sent: true,
+                    buttonText: 'Sent',
+                    err: 'success'
+                })
+                setTimeout(() => {
+                    resetForm();
+                }, 6000)
+            }
+        }).catch( (err) => {
+            //console.log(err.response.status)
+            setData({
+                ...data,
+                buttonText: 'Failed to send',
+                err: 'fail'
+            })
+        })
+    }
 
-    // const resetForm = () => {
-    //     setData({
-    //         name: '',
-    //         email: '',
-    //         message: '',
-    //         sent: false,
-    //         buttonText: 'Submit',
-    //         err: ''
-    //     });
-    // }
+    const resetForm = () => {
+        setData({
+            name: '',
+            email: '',
+            message: '',
+            sent: false,
+            buttonText: 'Submit',
+            err: ''
+        });
+    }
 
     return (
        <div> 
-            <div class="contact__form"> 
-                <form name="form" action="POST" method="POST" data-netlify="true">
-                 <input type='hidden' name='form-name' value='contact' />
-                    <div class="form__input">
-                        <input type="text" id="name" name="name" placeholder="Name" required=""/>
-                    </div>
-                    <div class="form__input">
-                        <input type="email" id="email" name="email" placeholder="Email" required=""/>
-                    </div>
-                    <div class="form__input">
-                        <textarea id="message" name="message" placeholder="Message"></textarea>
-                    </div>
-                    <div class="form__input">
-                        <input type="submit" id="submit" placeholder="SUBMIT"/>
-                    </div>
-                </form> 
-            </div>
+            <FormControl fullWidth={true} data-netlify="true">
+                <TextField required label="Full name" variant="filled" id="full-name" name="name" className="form-field" value={data.name} onChange={handleChange} />
+            </FormControl>
+            <FormControl fullWidth={true}>
+                <TextField required label="Email" id="email" name="email" variant="filled" className="form-field" value={data.email} onChange={handleChange} />
+            </FormControl>
+            <FormControl fullWidth={true}>
+                <TextField required label="Message" variant="filled" name="message" multiline={true} rows="10" value={data.message} onChange={handleChange} />
+            </FormControl>
+            <FormControl>
+                <div style={{padding: 20}}>
+                    <Grid container spacing={2}>
+                            <div className="form-submit">
+                                <Button variant="contained" color="primary" onClick={formSubmit}>{data.buttonText}</Button>
+                            </div>
+                        </Grid>
+                </div>
+            </FormControl>
         </div>
     );
 };
