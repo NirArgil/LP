@@ -59,7 +59,9 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   text-align: left;
   background-color: #fff;
 }
-
+.Gmaps{
+  border: none;
+}
 .logo {
   width: 140px;
 }

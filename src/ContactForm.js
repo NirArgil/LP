@@ -3,11 +3,11 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button"
 import FormControl from "@material-ui/core/FormControl"
 import Grid from "@material-ui/core/Grid"
-
 import axios from 'axios';
 
 const ContactForm = () => {
     const [data, setData] = useState({name: '', email: '', phone: '', message: '', sent: false, buttonText: 'Submit', err: ''})
+
 
     const handleChange = (e) => {
         const {name, value} = e.target
@@ -97,6 +97,12 @@ const ContactForm = () => {
                         </Grid>
                 </div>
             </FormControl>
+            
+            <div className="Gmaps" >
+                <iframe title="Gmaps"  width="600" height="450" frameborder="0" loading="lazy" allowfullscreen 
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJn_CDNwS3AhURt_DYDLUBEiA&key=AIzaSyC298AxhPuDtnvOfUueViL46JUzGt2K5Z4&language=en" ></iframe>            
+            </div>
+                 
         </div>
     );
 };
