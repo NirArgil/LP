@@ -141,7 +141,7 @@ export default function App() {
                 {/* <!-- About Section Content--> */}
                 <div class="row">
                     <div class="col-lg-4 ml-auto"><p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit vel odio vitae pulvinar. Integer orci tortor, mattis vitae iaculis vel, dictum non libero. Vivamus.</p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit vel odio vitae pulvinar. Integer orci tortor, mattis vitae iaculis vel, dictum non libero. ASD.</p></div>
+                    <div class="col-lg-4 mr-auto"><p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit vel odio vitae pulvinar. Integer orci tortor, mattis vitae iaculis vel, dictum non libero.</p></div>
                 </div>
                 {/* <!-- About Section Button--> */}
                 {/* <!-- <div class="text-center mt-4">
