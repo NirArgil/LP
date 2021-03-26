@@ -5,6 +5,9 @@ import FormControl from "@material-ui/core/FormControl"
 import Grid from "@material-ui/core/Grid"
 import axios from 'axios';
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API_URL = `https://www.google.com/maps/embed/v1/place?q=place_id:ChIJn_CDNwS3AhURt_DYDLUBEiA&key=${API_KEY}&language=en`;
+
 const ContactForm = () => {
     const [data, setData] = useState({name: '', email: '', phone: '', message: '', sent: false, buttonText: 'Submit', err: ''})
 
@@ -70,6 +73,8 @@ const ContactForm = () => {
         });
     }
 
+    
+
     return (
        <div> 
             <FormControl fullWidth={true}>
@@ -100,7 +105,7 @@ const ContactForm = () => {
             
             <div className="Gmaps" >
                 <iframe title="Gmaps"  width="600" height="450" frameborder="0" loading="lazy" allowfullscreen 
-                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJn_CDNwS3AhURt_DYDLUBEiA&key=AIzaSyC298AxhPuDtnvOfUueViL46JUzGt2K5Z4&language=en" ></iframe>            
+                src={API_URL} ></iframe>            
             </div>
                  
         </div>

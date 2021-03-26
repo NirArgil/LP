@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 nodemon.json
+
+#key
+.env
 # testing
 /coverage
 
