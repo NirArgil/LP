@@ -4,8 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-nodemon.json
 def.json
+
 #key
 .env
 # testing
