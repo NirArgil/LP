@@ -25,7 +25,7 @@ const ContactForm = () => {
 
         setData({
             ...data,
-            buttonText: 'Sending...'
+            buttonText: 'is sending...'
         })
 
         axios.post('/api/sendmail', data)
@@ -44,7 +44,7 @@ const ContactForm = () => {
                 setData({
                     ...data,
                     sent: true,
-                    buttonText: 'Sent',
+                    buttonText: 'Message just sent',
                     err: 'success'
                 })
                 setTimeout(() => {
@@ -68,7 +68,7 @@ const ContactForm = () => {
             phone: '',
             message: '',
             sent: false,
-            buttonText: 'Submit',
+            buttonText: 'Send Message',
             err: ''
         });
     }
@@ -76,40 +76,83 @@ const ContactForm = () => {
     
 
     return (
-       <div> 
-            <FormControl fullWidth={true}>
-                <TextField required label="Full name" variant="outlined" id="full-name" name="name" className="form-field" value={data.name} onChange={handleChange} />
-            </FormControl>
+     <div className="contactwrap"> 
+        <div className="contactin">
+            <h1>Contact Info</h1>
 
-            <FormControl fullWidth={true}>
-                <TextField label="Phone" id="phone" name="phone" variant="outlined" className="form-field" value={data.phone} onChange={handleChange} />
-            </FormControl>
-
-            <FormControl fullWidth={true}>
-                <TextField required label="Email" id="email" name="email" variant="outlined" className="form-field" value={data.email} onChange={handleChange} />
-            </FormControl>
-
-            <FormControl fullWidth={true}>
-                <TextField required label="Message" variant="outlined" name="message" multiline={true} rows="10" value={data.message} onChange={handleChange} />
-            </FormControl>
-
-            <FormControl>
-                <div id="submit" style={{padding: 20}}>
-                    <Grid container spacing={2}>
-                            <div className="form-submit">
-                                <Button size="large" variant="contained" color="primary" onClick={formSubmit}>{data.buttonText}</Button>
-                            </div>
-                        </Grid>
-                </div>
-            </FormControl>
+            <span class="iContact">
+            <i class="fa fa-phone-alt" aria-hidden="true"></i>
+            </span>
+            <h2>Phone</h2>
+            <p>08-1234567</p>
             
-            <div className="Gmaps" >
-                <iframe title="Gmaps"  width="600" height="450" frameborder="0" loading="lazy" allowfullscreen 
-                src={API_URL} ></iframe>            
-            </div>
-                 
+            <span class="iContact">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+            <h2>Email</h2>
+            <p>casavital@gmail.com</p>
+            
+            <span class="iContact">
+             <i class="fa fa-map-pin" aria-hidden="true"></i>
+            </span>
+            <h2>Address</h2>
+
+            <p>Herzel St. 168, <br />
+             Rehovot, <br />
+             Israel.</p>
         </div>
+
+        <div className="contactin">
+            <h1>Send a Message</h1>
+            <form>
+                <input required type="text" class="contactin-input" placeholder="Full Name" name="name" value={data.name} onChange={handleChange} />
+                <input required type="text" class="contactin-input" placeholder="Phone Number" name="phone" value={data.phone} onChange={handleChange} />
+                <input required type="text" class="contactin-input" placeholder="Email" name="email" value={data.email} onChange={handleChange} />
+                <textarea placeholder="Message" class="contactin-textarea" name="message" value={data.message} onChange={handleChange}></textarea>
+                <button type="submit" value="Submit" class="contactin-btn" onClick={formSubmit}>{data.buttonText}</button>
+            </form>
+        </div>
+                
+
+    <div className="contactin">
+       {/* <iframe title="Gmaps"  frameborder="0" loading="lazy" allowfullscreen width="100%" height="auto"
+        src={API_URL} ></iframe>             */}
+    </div>
+            
+            
+            
+                 
+    </div>
     );
 };
+
+
+/* <div className="form"> 
+<FormControl fullWidth={true}>
+<TextField class="contactin-input" required label="Full name" variant="outlined" id="full-name" name="name" className="form-field" value={data.name} onChange={handleChange} />
+</FormControl>
+
+<FormControl fullWidth={true}>
+<TextField class="contactin-input" label="Phone" id="phone" name="phone" variant="outlined" className="form-field" value={data.phone} onChange={handleChange} />
+</FormControl>
+
+<FormControl fullWidth={true}>
+<TextField class="contactin-input" required label="Email" id="email" name="email" variant="outlined" className="form-field" value={data.email} onChange={handleChange} />
+</FormControl>
+
+<FormControl fullWidth={true}>
+<TextField className="contactin-textarea" required label="Message" variant="outlined" name="message" multiline={true} rows="7" value={data.message} onChange={handleChange} />
+</FormControl>
+
+<FormControl>
+<div id="submit" style={{padding: 20}}>
+<Grid container spacing={2}>
+        <div className="form-submit">
+            <Button size="large" variant="contained" color="primary" onClick={formSubmit}>{data.buttonText}</Button>
+        </div>
+    </Grid>
+</div>
+</FormControl>
+</div> */
 
 export default ContactForm;
