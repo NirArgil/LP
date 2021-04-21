@@ -12,7 +12,7 @@ export default function LanguageSelector() {
   return (
       <div>
 
-          <select className="LanguageSelectorSelect"
+          <select className={ userLanguage === 'en' ? 'LanguageSelectorSelect' : 'LanguageSelectorSelectHeb' }
                   onChange={handleLanguageChange}
                   value={userLanguage}>
 

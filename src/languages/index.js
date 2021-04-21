@@ -5,5 +5,5 @@ export const dictionaryList = { en, heb };
 
 export const languageOptions = {
   en: 'English',
-  heb: 'Hebrew',
+  heb: 'עברית',
 };
