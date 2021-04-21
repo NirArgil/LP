@@ -6,8 +6,9 @@
 .pnp.js
 def.json
 
-#key
+#keys
 .env
+
 # testing
 /coverage
 
