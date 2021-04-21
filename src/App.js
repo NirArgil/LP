@@ -143,7 +143,7 @@ export default function App() {
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white" id="features"> <p className="roomText"> Single Room</p> </div>
                                     </div>
-                                    <img class="img-fluid" src={Room1A} alt="Room photo link" />
+                                    <img class="img-fluid" src={Room1A} alt="Room link" />
                                 </div>
                             </div>
                             {/* <!-- Portfolio Item 2--> */}
@@ -577,7 +577,7 @@ export default function App() {
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
                                             {/* <!-- Portfolio Modal - Title--> */}
-                                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2>
+                                            {/* <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2> */}
 
                                             {/* <!-- Portfolio Modal - Image--> */}
                                             <img class="img-fluid rounded mb-0" src={Gallery2} alt="Room two" />
@@ -607,7 +607,7 @@ export default function App() {
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
                                             {/* <!-- Portfolio Modal - Title--> */}
-                                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2>
+                                            {/* <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2> */}
 
                                             {/* <!-- Portfolio Modal - Image--> */}
                                             <img class="img-fluid rounded mb-0" src={Gallery3} alt="Room three" />
@@ -637,7 +637,7 @@ export default function App() {
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
                                             {/* <!-- Portfolio Modal - Title--> */}
-                                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2>
+                                            {/* <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2> */}
 
                                             {/* <!-- Portfolio Modal - Image--> */}
                                             <img class="img-fluid rounded mb-0" src={Gallery4} alt="Room four" />
@@ -666,7 +666,7 @@ export default function App() {
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
                                             {/* <!-- Portfolio Modal - Title--> */}
-                                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2>
+                                            {/* <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2> */}
 
                                             {/* <!-- Portfolio Modal - Image--> */}
                                             <img class="img-fluid rounded mb-0" src={Gallery5} alt="Room five" />
@@ -695,7 +695,7 @@ export default function App() {
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
                                             {/* <!-- Portfolio Modal - Title--> */}
-                                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2>
+                                            {/* <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2> */}
 
                                             {/* <!-- Portfolio Modal - Image--> */}
                                             <img class="img-fluid rounded mb-0" src={Gallery6} alt="Room six" />
