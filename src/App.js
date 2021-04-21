@@ -38,7 +38,7 @@ export default function App() {
                 {/* <!-- Navigation--> */}
                 <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
                     <div class="container">
-                        <a href="#page-top">  <img className="logo" src={logo} alt="Log image" /> </a>
+                        <a href="#page-top">  <img className="logo" src={logo} alt="Logo" /> </a>
                         {/* <a class="navbar-brand js-scroll-trigger" href="#page-top">Casa Vital</a> */}
 
                         <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,10 +63,6 @@ export default function App() {
 
                 <header class="masthead bg-primary text-white text-center" id="HeadScroll">
                     <div class="container d-flex align-items-center flex-column">
-                        {/* <!-- Masthead Avatar Image--> */}
-                        {/* <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="" />  */}
-                        {/* <!-- Masthead Heading--> */}
-
                         <h1 class="masthead-heading text-capitalize mb-0">Casa Vital</h1>
 
                         <p class="masthead-subheading mb-0">Luxury Hospitality</p>
@@ -156,7 +152,7 @@ export default function App() {
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white" id="features"><p className="roomText"> Deluxe Room</p> </div>
                                     </div>
-                                    <img class="img-fluid" src={Room2A} alt="Room photo link" />
+                                    <img class="img-fluid" src={Room2A} alt="Room link" />
                                 </div>
                             </div>
                             {/* <!-- Portfolio Item 3--> */}
@@ -165,36 +161,10 @@ export default function App() {
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white" id="features"><p className="roomText"> Luxury Room</p> </div>
                                     </div>
-                                    <img class="img-fluid" src={Room3A} alt="Room photo link" />
+                                    <img class="img-fluid" src={Room3A} alt="Room link" />
                                 </div>
                             </div>
-                            {/* <!-- Portfolio Item 4--> */}
-                            {/* <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-                                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div class="portfolio-item-caption-content text-center text-white" id="features"><i class="fas fa-expand-alt fa-5x"></i></div>
-                                    </div>
-                                    <img class="img-fluid" src="" alt="Room photo link" />
-                                </div>
-                            </div> */}
-                            {/* <!-- Portfolio Item 5--> */}
-                            {/* <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
-                                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div class="portfolio-item-caption-content text-center text-white" id="features"><i class="fas fa-expand-alt fa-5x"></i></div>
-                                    </div>
-                                    <img class="img-fluid" src="" alt="Room photo link" />
-                                </div>
-                            </div> */}
-                            {/* <!-- Portfolio Item 6--> */}
-                            {/* <div class="col-md-6 col-lg-4">
-                                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-                                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div class="portfolio-item-caption-content text-center text-white" id="features"><i class="fas fa-expand-alt fa-5x"></i></div>
-                                    </div>
-                                    <img class="img-fluid" src="" alt="Room photo link" />
-                                </div>
-                            </div> */}
+                           
                         </div>
                     </div>
                 </section>
@@ -215,7 +185,7 @@ export default function App() {
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white" id="features"><i class="fas fa-expand-alt fa-3x"></i></div>
                                     </div>
-                                    <img class="img-fluid" src={Gallery1} alt="Room photo link" />
+                                    <img class="img-fluid" src={Gallery1} alt="Gallery link" />
                                 </div>
                             </div>
                             {/* <!-- Gallery Item 2--> */}
@@ -224,7 +194,7 @@ export default function App() {
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white" id="features"> <i class="fas fa-expand-alt fa-3x"></i></div>
                                     </div>
-                                    <img class="img-fluid" src={Gallery2} alt="Room photo link" />
+                                    <img class="img-fluid" src={Gallery2} alt="Gallery link" />
                                 </div>
                             </div>
                             {/* <!-- Gallery Item 3--> */}
@@ -233,7 +203,7 @@ export default function App() {
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white" id="features"> <i class="fas fa-expand-alt fa-3x"></i></div>
                                     </div>
-                                    <img class="img-fluid" src={Gallery3} alt="Room photo link" />
+                                    <img class="img-fluid" src={Gallery3} alt="Gallery link" />
                                 </div>
                             </div>
                             {/* <!-- Gallery Item 4--> */}
@@ -242,7 +212,7 @@ export default function App() {
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white" id="features"><i class="fas fa-expand-alt fa-3x"></i></div>
                                     </div>
-                                    <img class="img-fluid" src={Gallery4} alt="Room photo link" />
+                                    <img class="img-fluid" src={Gallery4} alt="Gallery link" />
                                 </div>
                             </div>
                             {/* <!-- Gallery Item 5--> */}
@@ -251,7 +221,7 @@ export default function App() {
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white" id="features"><i class="fas fa-expand-alt fa-3x"></i></div>
                                     </div>
-                                    <img class="img-fluid" src={Gallery5} alt="Room photo link" />
+                                    <img class="img-fluid" src={Gallery5} alt="Gallery link" />
                                 </div>
                             </div>
                             {/* <!-- Gallery Item 6--> */}
@@ -260,7 +230,7 @@ export default function App() {
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white" id="features"><i class="fas fa-expand-alt fa-3x"></i></div>
                                     </div>
-                                    <img class="img-fluid" src={Gallery6} alt="Room photo link" />
+                                    <img class="img-fluid" src={Gallery6} alt="Gallery link" />
                                 </div>
                             </div>
                         </div>
@@ -334,9 +304,9 @@ export default function App() {
                     <div class="container"><small>Copyright © NirArgil 2021 | באתר זה בוצעו התאמות נגישות עבור אנשים עם מוגבלויות.</small></div>
                 </div>
                 {/* <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)--> */}
-                <div class="scroll-to-top d-lg-none position-fixed">
+                {/* <div class="scroll-to-top d-lg-none position-fixed">
                     <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
-                </div>
+                </div> */}
                 {/* <!-- Portfolio Modals--> */}
                 {/* <!-- Portfolio Modal 1--> */}
                 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
@@ -359,13 +329,13 @@ export default function App() {
                                                 </ol>
                                                 <div class="carousel-inner">
                                                     <div class="carousel-item active">
-                                                        <img class="carousel-img" src={Room1A} alt="First slide" alt="Room photo" />
+                                                        <img class="carousel-img" src={Room1A} alt="First slide" />
                                                     </div>
                                                     <div class="carousel-item">
-                                                        <img class="carousel-img" src={Room1B} alt="Second slide" alt="Room photo" />
+                                                        <img class="carousel-img" src={Room1B} alt="Second slide" />
                                                     </div>
                                                     <div class="carousel-item">
-                                                        <img class="carousel-img" src={Room1C} alt="Third slide" alt="Room photo" />
+                                                        <img class="carousel-img" src={Room1C} alt="Third slide" />
                                                     </div>
                                                 </div>
                                                 <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
@@ -437,13 +407,13 @@ export default function App() {
                                                 </ol>
                                                 <div class="carousel-inner">
                                                     <div class="carousel-item active">
-                                                        <img class="carousel-img" src={Room2A} alt="First slide" alt="Room photo" />
+                                                        <img class="carousel-img" src={Room2A} alt="First slide" />
                                                     </div>
                                                     <div class="carousel-item">
-                                                        <img class="carousel-img" src={Room2B} alt="Second slide" alt="Room photo" />
+                                                        <img class="carousel-img" src={Room2B} alt="Second slide" />
                                                     </div>
                                                     <div class="carousel-item">
-                                                        <img class="carousel-img" src={Room2C} alt="Third slide" alt="Room photo" />
+                                                        <img class="carousel-img" src={Room2C} alt="Third slide" />
                                                     </div>
                                                 </div>
                                                 <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
@@ -511,13 +481,13 @@ export default function App() {
                                                 </ol>
                                                 <div class="carousel-inner">
                                                     <div class="carousel-item active">
-                                                        <img class="carousel-img" src={Room3A} alt="First slide" alt="Room photo" />
+                                                        <img class="carousel-img" src={Room3A} alt="First slide" />
                                                     </div>
                                                     <div class="carousel-item">
-                                                        <img class="carousel-img" src={Room3B} alt="Second slide" alt="Room photo" />
+                                                        <img class="carousel-img" src={Room3B} alt="Second slide" />
                                                     </div>
                                                     <div class="carousel-item">
-                                                        <img class="carousel-img" src={Room3C} alt="Third slide" alt="Room photo" />
+                                                        <img class="carousel-img" src={Room3C} alt="Third slide" />
                                                     </div>
                                                 </div>
                                                 <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
@@ -581,7 +551,7 @@ export default function App() {
                                             {/* <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label">galleryModal1galleryModal1galleryModal1</h2> */}
 
                                             {/* <!-- Portfolio Modal - Image--> */}
-                                            <img class="img-fluid rounded mb-0" src={Gallery1} alt="Room photo" />
+                                            <img class="img-fluid rounded mb-0" src={Gallery1} alt="Room one" />
                                             {/* <!-- Portfolio Modal - Text--> */}
                                             {/* <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p> */}
                                             {/* <button class="btn btn-primary" data-dismiss="modal">
@@ -610,7 +580,7 @@ export default function App() {
                                             <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2>
 
                                             {/* <!-- Portfolio Modal - Image--> */}
-                                            <img class="img-fluid rounded mb-0" src={Gallery2} alt="Room photo" />
+                                            <img class="img-fluid rounded mb-0" src={Gallery2} alt="Room two" />
                                             {/* <!-- Portfolio Modal - Text--> */}
                                             {/* <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                             <button class="btn btn-primary" data-dismiss="modal">
@@ -640,7 +610,7 @@ export default function App() {
                                             <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2>
 
                                             {/* <!-- Portfolio Modal - Image--> */}
-                                            <img class="img-fluid rounded mb-0" src={Gallery3} alt="Room photo" />
+                                            <img class="img-fluid rounded mb-0" src={Gallery3} alt="Room three" />
                                             {/* <!-- Portfolio Modal - Text--> */}
                                             {/* <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                             <button class="btn btn-primary" data-dismiss="modal">
@@ -670,7 +640,7 @@ export default function App() {
                                             <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2>
 
                                             {/* <!-- Portfolio Modal - Image--> */}
-                                            <img class="img-fluid rounded mb-0" src={Gallery4} alt="Room photo" />
+                                            <img class="img-fluid rounded mb-0" src={Gallery4} alt="Room four" />
                                             {/* <!-- Portfolio Modal - Text--> */}
                                             {/* <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                             <button class="btn btn-primary" data-dismiss="modal">
@@ -699,7 +669,7 @@ export default function App() {
                                             <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2>
 
                                             {/* <!-- Portfolio Modal - Image--> */}
-                                            <img class="img-fluid rounded mb-0" src={Gallery5} alt="Room photo" />
+                                            <img class="img-fluid rounded mb-0" src={Gallery5} alt="Room five" />
                                             {/* <!-- Portfolio Modal - Text--> */}
                                             {/* <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                             <button class="btn btn-primary" data-dismiss="modal">
@@ -728,7 +698,7 @@ export default function App() {
                                             <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label"></h2>
 
                                             {/* <!-- Portfolio Modal - Image--> */}
-                                            <img class="img-fluid rounded mb-0" src={Gallery6} alt="Room photo" />
+                                            <img class="img-fluid rounded mb-0" src={Gallery6} alt="Room six" />
                                             {/* <!-- Portfolio Modal - Text--> */}
                                             {/* <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                             <button class="btn btn-primary" data-dismiss="modal">
