@@ -86,9 +86,9 @@ export default function App() {
                         <div className="cen">
 
                             <div className="service">
-                                <i class="fas fa-tshirt"></i>
-                                <h2><Text tid="OurServicesH3" /></h2>
-                                <p><Text tid="OurServicesP3" /></p>
+                                <i class="fas fa-car-side"></i>
+                                <h2><Text tid="OurServicesH1" /></h2>
+                                <p><Text tid="OurServicesP1" /></p>
                             </div>
 
                             <div className="service">
@@ -98,9 +98,9 @@ export default function App() {
                             </div>
 
                             <div className="service">
-                                <i class="fas fa-car-side"></i>
-                                <h2><Text tid="OurServicesH1" /></h2>
-                                <p><Text tid="OurServicesP1" /></p>
+                                <i class="fas fa-tshirt"></i>
+                                <h2><Text tid="OurServicesH3" /></h2>
+                                <p><Text tid="OurServicesP3" /></p>
                             </div>
 
                             <div className="service">
