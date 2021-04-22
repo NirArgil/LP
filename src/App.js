@@ -54,6 +54,7 @@ export default function App() {
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"><Text tid="ContactUsNav" /></a></li>
                                 </ul>
                             </div>
+
                         </div>
                         <LanguageSelector />
 
@@ -62,7 +63,7 @@ export default function App() {
                 {/* <!-- Masthead--> */}
 
                 <header class="masthead bg-primary text-white text-center" id="HeadScroll">
-                    <div class="container d-flex align-items-center flex-column">
+                    <div class="container d-flex align-items-center flex-column" id="headerContent">
                         <h1 class="masthead-heading text-capitalize mb-0">Casa Vital</h1>
 
                         <p class="masthead-subheading mb-0">Luxury Hospitality</p>
@@ -164,7 +165,7 @@ export default function App() {
                                     <img class="img-fluid" src={Room3A} alt="Room link" />
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
                 </section>
@@ -263,7 +264,7 @@ export default function App() {
                 {/* <!-- Contact Section--> */}
                 <section class="page-section" id="contact">
                     <div class="contact-head">
-                        <h1>Contact Us</h1>
+                        <h1><Text tid="ContactUsNav" /></h1>
                     </div>
                     <ContactForm />
                 </section>
@@ -284,24 +285,27 @@ export default function App() {
                             </div>
                             {/* <!-- Footer Social Icons--> */}
                             <div class="col-lg-4 mb-5 mb-lg-0">
-                                <h4 class="mb-4"><Text tid="FooterCenter" /></h4>
-                                <a class="btn btn-outline-light btn-social mx-1" href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-google fa-2x"></i></a>
-                                <a class="btn btn-outline-light btn-social mx-1" href="https://he.airbnb.com/rooms/14049154?_set_bev_on_new_domain=1619006328_NzM2MGE3OGUwZWI2&source_impression_id=p3_1619006734_9ziCjMd5xGMk56aY&guests=1&adults=1" target="_blank" rel="noopener noreferrer"><i class="fab fa-airbnb fa-2x"></i></a>
-                                <a class="btn btn-outline-light btn-social mx-1" href="https://www.tripadvisor.co.il/Hotel_Review-g1868435-d1912004-Reviews-Casa_de_Vital-Rehovot_Central_District.html" target="_blank" rel="noopener noreferrer"><i class="fab fa-tripadvisor fa-2x"></i></a>
+                                <h4 class="mb-2"><Text tid="FooterCenter" /></h4>
+                                <a class="btn btn-outline-light btn-social mx-1" href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-outline-light btn-social mx-1" href="https://he.airbnb.com/rooms/14049154?_set_bev_on_new_domain=1619006328_NzM2MGE3OGUwZWI2&source_impression_id=p3_1619006734_9ziCjMd5xGMk56aY&guests=1&adults=1" target="_blank" rel="noopener noreferrer"><i class="fab fa-airbnb"></i></a>
+                                <a class="btn btn-outline-light btn-social mx-1" href="https://www.tripadvisor.co.il/Hotel_Review-g1868435-d1912004-Reviews-Casa_de_Vital-Rehovot_Central_District.html" target="_blank" rel="noopener noreferrer"><i class="fab fa-tripadvisor"></i></a>
                                 {/* <!-- <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a> --> */}
                             </div>
                             {/* <!-- Footer About Text--> */}
                             <div class="col-lg-4">
                                 <h4 class="mb-1"><Text tid="FooterRight1" /></h4>
                                 <p class="lead mb-0"><Text tid="FooterRight2" />
-                        </p>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </footer>
                 {/* <!-- Copyright Section--> */}
-                <div class="copyright py-4 text-center text-white">
-                    <div class="container"><small>Copyright © NirArgil 2021 | באתר זה בוצעו התאמות נגישות עבור אנשים עם מוגבלויות.</small></div>
+                <div class="copyright py-3 text-center text-white">
+                    <div class="container">
+                        <small> <span class="AccessibilitySpan"> <Text tid="AccessibilityP" /></span>  <br />
+                     Copyright © NirArgil 2021 </small>
+                    </div>
                 </div>
                 {/* <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)--> */}
                 {/* <div class="scroll-to-top d-lg-none position-fixed">
