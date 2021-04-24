@@ -17,6 +17,10 @@
   "ContactFormInfoEmail": "Email",
   "ContactFormInfoAddress": "Address",
 
+  "ContactFormInfoAddressP1": "Herzel St. 168,",
+  "ContactFormInfoAddressP2": "Rehovot,",
+  "ContactFormInfoAddressP3": "Israel.",
+
   "Send a Message": "Send a Message",
   "buttonTextSendMsgFirst": "Send a Message",
   "buttonTextSendMsg": "Send a Message",
