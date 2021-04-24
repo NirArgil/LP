@@ -84,6 +84,7 @@ const ContactForm = () => {
             </span>
             <h2><Text tid="ContactFormInfoPhone" /></h2>
             <p>050-5314806</p>
+            <p>052-7026632</p>
             
             <span class="iContact">
             <i class="fa fa-envelope" aria-hidden="true"></i>
