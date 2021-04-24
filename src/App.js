@@ -130,7 +130,7 @@ export default function App() {
                 <section class="page-section portfolio" id="portfolio">
                     <div class="container">
                         <div class="ourrooms">
-                            <h1 class="ourroomsh1">Our Rooms</h1>
+                            <h1 class="ourroomsh1"><Text tid="OurRoomsNav" /></h1>
                         </div>
 
 
@@ -173,7 +173,7 @@ export default function App() {
                 <section class="page-section portfolio" id="gallery">
                     <div class="container">
                         <div class="gallery">
-                            <h1>Gallery</h1>
+                            <h1><Text tid="GalleryNav" /></h1>
                         </div>
 
                         <div class="divider-custom"></div>

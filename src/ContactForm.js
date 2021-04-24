@@ -83,7 +83,7 @@ const ContactForm = () => {
             <i class="fa fa-phone-alt" aria-hidden="true"></i>
             </span>
             <h2><Text tid="ContactFormInfoPhone" /></h2>
-            <p>08-1234567</p>
+            <p>050-5314806</p>
             
             <span class="iContact">
             <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -102,7 +102,7 @@ const ContactForm = () => {
         </div>
 
         <div className="contactin">
-            <h1>Send a Message</h1>
+            <h1><Text tid="Send a Message" /></h1>
             <form>
                 <input required type="text" class="contactin-input" placeholder="Full Name / שם מלא" name="name" value={data.name} onChange={handleChange} />
                 <input required type="text" class="contactin-input" placeholder="Phone Number / מס' טלפון" name="phone" value={data.phone} onChange={handleChange} />
