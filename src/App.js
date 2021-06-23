@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import './App.css';
 
 //Rooms
-import Room1A from './assets/img/portfolio/Room1-1.jpg';
+import Room1A from './assets/img/portfolio/Room1-1.jpeg';
 import Room1B from './assets/img/portfolio/Room1-2.jpg';
 import Room1C from './assets/img/portfolio/Room1-3.jpeg';
 import Room2A from './assets/img/portfolio/Room2A.jpg';
@@ -14,9 +14,9 @@ import Room3C from './assets/img/portfolio/Room3C.jpeg';
 
 //Gallery
 import Gallery1 from './assets/img/portfolio/gallery1.jpeg';
-import Gallery2 from './assets/img/portfolio/gallery2.JPG';
-import Gallery3 from './assets/img/portfolio/gallery3.JPG';
-import Gallery4 from './assets/img/portfolio/gallery4.JPG';
+import Gallery2 from './assets/img/portfolio/gallery2.jpeg';
+import Gallery3 from './assets/img/portfolio/gallery3.jpeg';
+import Gallery4 from './assets/img/portfolio/gallery4.jpeg';
 import Gallery5 from './assets/img/portfolio/gallery5.jpg';
 import Gallery6 from './assets/img/portfolio/gallery6.jpeg';
 
