@@ -83,7 +83,7 @@ const ContactForm = () => {
                     <i class="fa fa-phone-alt" aria-hidden="true"></i>
                 </span>
                 <h2><Text tid="ContactFormInfoPhone" /></h2>
-                <p>050-5314806</p>
+                <p>050-5318406</p>
                 <p>052-7026632</p>
 
                 <span class="iContact">
