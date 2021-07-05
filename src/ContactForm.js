@@ -84,13 +84,15 @@ const ContactForm = () => {
                 </span>
                 <h2><Text tid="ContactFormInfoPhone" /></h2>
                 <p>050-5318406</p>
+                <p>050-5272382</p>
                 <p>052-7026632</p>
 
                 <span class="iContact">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                 </span>
                 <h2><Text tid="ContactFormInfoEmail" /></h2>
-                <p>casavital@gmail.com</p>
+                <p>vital23@netvision.net.il</p>
+                <p>nissim168@gmail.com</p>
 
                 <span class="iContact">
                     <i class="fas fa-map-pin" aria-hidden="true"></i>
