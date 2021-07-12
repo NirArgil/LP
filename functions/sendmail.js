@@ -10,6 +10,7 @@ exports.handler = function(event, context, callback) {
 
     let transporter = nodemailer.createTransport({
         host: `${HOST}`,
+        // service: "Gmail",
         port: 465,
         secure: true,
         auth:{
