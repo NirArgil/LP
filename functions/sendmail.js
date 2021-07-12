@@ -2,15 +2,15 @@ const nodemailer = require('nodemailer');
 
 // const USER_NAME = process.env.REACT_APP_USER_NAME;
 // const PASSWORD = process.env.REACT_APP_PASSWORD;
-const HOST = process.env.REACT_APP_HOST;
+// const HOST = process.env.REACT_APP_HOST;
 
 exports.handler = function(event, context, callback) {
 
     let data = JSON.parse(event.body)
 
     let transporter = nodemailer.createTransport({
-        host: `${HOST}`,
-        // service: "Gmail",
+        // host: `${HOST}`,
+        service: "Gmail",
         port: 465,
         secure: true,
         auth:{
