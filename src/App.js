@@ -38,7 +38,7 @@ export default function App() {
                 {/* <!-- Navigation--> */}
                 <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
                     <div class="container">
-                        <a href="#page-top">  <img className="logo" src={logo} alt="Logo" /> </a>
+                        <a href="#page-top">  <img className="logo" src={logo} alt="Logo casa vital" /> </a>
                         {/* <a class="navbar-brand js-scroll-trigger" href="#page-top">Casa Vital</a> */}
 
                         <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,7 +70,7 @@ export default function App() {
 
                     </div>
                     <div>
-                        <a href="https://wa.me/972527026632" class="float" target="_blank" rel="noopener noreferrer" alt="WhatsApButton">
+                        <a href="https://wa.me/972527026632" class="float" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
                             <i class="fab fa-whatsapp my-float"></i>
                         </a>
 
@@ -144,7 +144,7 @@ export default function App() {
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white" id="features"> <p className="roomText"> Single Room</p> </div>
                                     </div>
-                                    <img class="img-fluid" src={Room1A} alt="Room link" />
+                                    <img class="img-fluid" src={Room1A} alt="HotelRoominRehovot" />
                                 </div>
                             </div>
                             {/* <!-- Portfolio Item 2--> */}
@@ -153,7 +153,7 @@ export default function App() {
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white" id="features"><p className="roomText"> Deluxe Room</p> </div>
                                     </div>
-                                    <img class="img-fluid" src={Room2A} alt="Room link" />
+                                    <img class="img-fluid" src={Room2A} alt="ApartmentsHotelinrehovot" />
                                 </div>
                             </div>
                             {/* <!-- Portfolio Item 3--> */}
@@ -162,7 +162,7 @@ export default function App() {
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white" id="features"><p className="roomText"> Luxury Room</p> </div>
                                     </div>
-                                    <img class="img-fluid" src={Room3A} alt="Room link" />
+                                    <img class="img-fluid" src={Room3A} alt="Hotelroominrehovotisrael" />
                                 </div>
                             </div>
 
