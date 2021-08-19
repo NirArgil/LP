@@ -26,7 +26,7 @@ exports.handler = function(event, context, callback) {
     transporter.sendMail({
         from: "send@example.com",
         to: process.env.REACT_APP_USER_NAME,
-        subject: `Contact Form`,
+        subject: `Casa de Vital Contact Form`,
         html: `
             <h3>Email from ${data.name}, <br>
             Email: ${data.email}<h3>.

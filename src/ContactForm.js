@@ -97,7 +97,7 @@ const ContactForm = () => {
                 </span>
                 <h2><Text tid="ContactFormInfoAddress" /></h2>
 
-                 <p><Text tid="ContactFormInfoAddressP1" /> <br />
+                <p><Text tid="ContactFormInfoAddressP1" /> <br />
                     <Text tid="ContactFormInfoAddressP2" /> <br />
                     <Text tid="ContactFormInfoAddressP3" />
                 </p>
