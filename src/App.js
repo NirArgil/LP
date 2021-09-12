@@ -304,7 +304,7 @@ export default function App() {
                 <div class="copyright py-3 text-center text-white">
                     <div class="container">
                         <small> <span class="AccessibilitySpan"> <Text tid="AccessibilityP" /></span>  <br />
-                     Copyright © NirArgil 2021 </small>
+                            Copyright © NirArgil 2021 </small>
                     </div>
                 </div>
                 {/* <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)--> */}

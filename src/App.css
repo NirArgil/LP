@@ -11396,7 +11396,7 @@ a.text-dark:focus {
   background: #ddd;
 }
 
-.service svg {
+.service i {
   color: #1a252f;
   font-size: 34px;
   margin-bottom: 14px;
