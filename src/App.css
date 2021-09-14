@@ -783,6 +783,12 @@ mark,
   border-radius: 3px;
 }
 
+@media (max-width: 500px) {
+  .img-Fluid {
+  width: 100px;
+  }
+}
+  
 .roomText {
   font-size: 41px;
   font-weight: 300;
@@ -1272,7 +1278,7 @@ pre code {
 
   .col-sm-6 {
     flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 30%;
   }
 
   .col-sm-7 {
