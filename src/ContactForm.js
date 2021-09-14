@@ -11,7 +11,7 @@ const API_URL = `https://www.google.com/maps/embed/v1/place?q=place_id:ChIJn_CDN
 const ContactForm = () => {
     const { t } = useTranslation();
 
-    const [data, setData] = useState({ name: '', email: '', phone: '', message: '', sent: false, buttonText: <p>{t("buttonTextSendMsgFirst")}</p>, err: '' })
+    const [data, setData] = useState({ name: '', email: '', phone: '', message: '', sent: false, buttonText: `${t("buttonTextSendMsgFirst")}`, err: '' })
 
 
     const handleChange = (e) => {
@@ -27,7 +27,7 @@ const ContactForm = () => {
 
         setData({
             ...data,
-            buttonText: <p>{t("buttonTextIsSending")}</p>
+            buttonText: `${t("buttonTextIsSending")}`
         })
 
         axios.post('/api/sendmail', data)
@@ -35,7 +35,7 @@ const ContactForm = () => {
                 if (res.data.result !== 'success') {
                     setData({
                         ...data,
-                        buttonText: <p>{t("buttonTextFailed")}</p>,
+                        buttonText: `${t("buttonTextFailed")}`,
                         sent: false,
                         err: 'fail'
                     })
@@ -46,7 +46,7 @@ const ContactForm = () => {
                     setData({
                         ...data,
                         sent: true,
-                        buttonText: <p>{t("buttonTextMsgSent")}</p>,
+                        buttonText: `${t("buttonTextMsgSent")}`,
                         err: 'success'
                     })
                     setTimeout(() => {
@@ -57,7 +57,7 @@ const ContactForm = () => {
 
                 setData({
                     ...data,
-                    buttonText: <p>{t("buttonTextFailed")}</p>,
+                    buttonText: `${t("buttonTextFailed")}`,
                     err: 'fail'
                 })
             })
