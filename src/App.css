@@ -182,9 +182,22 @@ section {
 .contactin:nth-child(1) {
   flex: 30%;
   background: url(./assets/img/portfolio/a.webp);
-  color: #fff;
   background-size: cover;
 }
+
+.contactin:nth-child(1) p{
+ color: rgb(40, 43, 58);
+ font-weight: 500;
+}
+
+.contactin:nth-child(1) h2{
+  color: rgb(40, 43, 58);
+  font-weight: 500;
+ }
+
+ .contactin:nth-child(1) h1{
+  color: rgb(40, 43, 58);
+ }
 
 .contactin:nth-child(2) {
   flex: 35%;
@@ -761,6 +774,13 @@ mark,
   background-size: contain;
   width: 500px;
   height: 410px;
+}
+
+.img-Fluid {
+  max-width: 100%;
+  width: 180px;
+  height: auto;
+  border-radius: 3px;
 }
 
 .roomText {

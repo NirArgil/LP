@@ -20,6 +20,13 @@ import Gallery4 from './assets/img/portfolio/gallery4.webp';
 import Gallery5 from './assets/img/portfolio/gallery5.webp';
 import Gallery6 from './assets/img/portfolio/gallery6.webp';
 
+//Icon section
+import trivagoIcon from './assets/img/portfolio/trivago.png'
+import bookingIcon from './assets/img/portfolio/booking.png'
+import tripadvisorIcon from './assets/img/portfolio/tripadvisor.png'
+import agodaIcon from './assets/img/portfolio/agoda.png'
+import airbnbIcon from './assets/img/portfolio/airbnb.png'
+import hotelsIcon from './assets/img/portfolio/hotels.png'
 
 import logo from './assets/img/portfolio/logo.png';
 import ContactForm from './ContactForm';
@@ -89,6 +96,42 @@ export default function App() {
                 </header>
 
                 {/* class="page-section bg-primary text-white mb-0" */}
+                <div class="py-5">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            
+                            <div class="col-md-2 col-sm-6 my-3">
+                                <a href="http://www.booking.com/Share-TM4hYQ" target="_blank" rel="noopener noreferrer">
+                                <img class="img-Fluid img-brand d-block mx-auto" src={bookingIcon} alt="bookingcom" /></a>
+                            </div>
+
+                            <div class="col-md-2 col-sm-6 my-3">
+                                <a href="https://www.tripadvisor.co.il/Hotel_Review-g1868435-d1912004-Reviews-Casa_de_Vital-Rehovot_Central_District.html?m=19905" target="_blank" rel="noopener noreferrer">
+                                <img class="img-Fluid img-brand d-block mx-auto" src={tripadvisorIcon} alt="tripadvisor" /></a>
+                            </div>
+
+                            <div class="col-md-2 col-sm-6 my-3">
+                                <a href="https://www.trivago.co.il/רחובות-84890/hotel/הבית-של-ויטל-1375391" target="_blank" rel="noopener noreferrer">
+                                <img class="img-Fluid img-brand d-block mx-auto" src={trivagoIcon} alt="trivagoLink" /></a>
+                            </div>
+
+                            <div class="col-md-2 col-sm-6 my-3">
+                                <a href="https://www.agoda.com/casa-vital-boutique-hotel/hotel/rehovot-il.html" target="_blank" rel="noopener noreferrer">
+                                <img class="img-Fluid img-brand d-block mx-auto" src={agodaIcon} alt="agoda" /></a>
+                            </div>
+
+                            <div class="col-md-2 col-sm-6 my-3">
+                                <a href="https://he.airbnb.com/rooms/14049154" target="_blank" rel="noopener noreferrer">
+                                <img class="img-Fluid img-brand d-block mx-auto" src={airbnbIcon} alt="airbnb" /></a>
+                            </div>
+
+                            <div class="col-md-2 col-sm-6 my-3">
+                                <a href="https://www.hotelscombined.co.il" target="_blank" rel="noopener noreferrer">
+                                <img class="img-Fluid img-brand d-block mx-auto" src={hotelsIcon} alt="hotelsbutique" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <section id="services">
                     <div className="services">
@@ -296,10 +339,9 @@ export default function App() {
                             {/* <!-- Footer Social Icons--> */}
                             <div class="col-lg-4 mb-5 mb-lg-0">
                                 <h4 class="mb-2">{t("FooterCenter")}</h4>
-                                <a class="btn btn-outline-light btn-social mx-1" href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i></a>
-                                <a class="btn btn-outline-light btn-social mx-1" href="https://he.airbnb.com/rooms/14049154?_set_bev_on_new_domain=1619006328_NzM2MGE3OGUwZWI2&source_impression_id=p3_1619006734_9ziCjMd5xGMk56aY&guests=1&adults=1" target="_blank" rel="noopener noreferrer"><i class="fab fa-airbnb"></i></a>
-                                <a class="btn btn-outline-light btn-social mx-1" href="https://www.tripadvisor.co.il/Hotel_Review-g1868435-d1912004-Reviews-Casa_de_Vital-Rehovot_Central_District.html" target="_blank" rel="noopener noreferrer"><i class="fab fa-tripadvisor"></i></a>
-                                {/* <!-- <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a> --> */}
+                                <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                                {/* <a class="btn btn-outline-light btn-social mx-1" href="https://he.airbnb.com/rooms/14049154?_set_bev_on_new_domain=1619006328_NzM2MGE3OGUwZWI2&source_impression_id=p3_1619006734_9ziCjMd5xGMk56aY&guests=1&adults=1" target="_blank" rel="noopener noreferrer"><i class="fab fa-airbnb"></i></a> */}
+                                {/* <a class="btn btn-outline-light btn-social mx-1" href="https://www.tripadvisor.co.il/Hotel_Review-g1868435-d1912004-Reviews-Casa_de_Vital-Rehovot_Central_District.html" target="_blank" rel="noopener noreferrer"><i class="fab fa-tripadvisor"></i></a> */}
                             </div>
                             {/* <!-- Footer About Text--> */}
                             <div class="col-lg-4">
