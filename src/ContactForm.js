@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import { Text } from './containers/Language';
+
+//Language Switcher
+import './i18next';
+import { useTranslation } from "react-i18next";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API_URL = `https://www.google.com/maps/embed/v1/place?q=place_id:ChIJn_CDNwS3AhURt_DYDLUBEiA&key=${API_KEY}&language=en`;
 
 const ContactForm = () => {
-    const [data, setData] = useState({ name: '', email: '', phone: '', message: '', sent: false, buttonText: <Text tid="buttonTextSendMsgFirst" />, err: '' })
+    const { t } = useTranslation();
+
+    const [data, setData] = useState({ name: '', email: '', phone: '', message: '', sent: false, buttonText: <p>{t("buttonTextSendMsgFirst")}</p>, err: '' })
 
 
     const handleChange = (e) => {
@@ -22,7 +27,7 @@ const ContactForm = () => {
 
         setData({
             ...data,
-            buttonText: <Text tid="buttonTextIsSending" />
+            buttonText: <p>{t("buttonTextIsSending")}</p>
         })
 
         axios.post('/api/sendmail', data)
@@ -30,7 +35,7 @@ const ContactForm = () => {
                 if (res.data.result !== 'success') {
                     setData({
                         ...data,
-                        buttonText: <Text tid="buttonTextFailed" />,
+                        buttonText: <p>{t("buttonTextFailed")}</p>,
                         sent: false,
                         err: 'fail'
                     })
@@ -41,7 +46,7 @@ const ContactForm = () => {
                     setData({
                         ...data,
                         sent: true,
-                        buttonText: <Text tid="buttonTextMsgSent" />,
+                        buttonText: <p>{t("buttonTextMsgSent")}</p>,
                         err: 'success'
                     })
                     setTimeout(() => {
@@ -52,7 +57,7 @@ const ContactForm = () => {
 
                 setData({
                     ...data,
-                    buttonText: <Text tid="buttonTextFailed" />,
+                    buttonText: <p>{t("buttonTextFailed")}</p>,
                     err: 'fail'
                 })
             })
@@ -75,12 +80,12 @@ const ContactForm = () => {
     return (
         <div className="contactwrap">
             <div className="contactin">
-                <h1><Text tid="ContactFormInfo" /> </h1>
+                <h1>{t("ContactFormInfo")}</h1>
 
                 <span class="iContact">
                     <i class="fa fa-phone-alt" aria-hidden="true"></i>
                 </span>
-                <h2><Text tid="ContactFormInfoPhone" /></h2>
+                <h2>{t("ContactFormInfoPhone")}</h2>
                 <p>050-5318406</p>
                 <p>050-5272382</p>
                 <p>052-7026632</p>
@@ -88,23 +93,24 @@ const ContactForm = () => {
                 <span class="iContact">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                 </span>
-                <h2><Text tid="ContactFormInfoEmail" /></h2>
+                <h2>{t("ContactFormInfoEmail")}</h2>
                 <p>vital23@netvision.net.il</p>
                 <p>nissim168@gmail.com</p>
 
                 <span class="iContact">
                     <i class="fas fa-map-pin" aria-hidden="true"></i>
                 </span>
-                <h2><Text tid="ContactFormInfoAddress" /></h2>
+                <h2>{t("ContactFormInfoAddress")}</h2>
 
-                <p><Text tid="ContactFormInfoAddressP1" /> <br />
-                    <Text tid="ContactFormInfoAddressP2" /> <br />
-                    <Text tid="ContactFormInfoAddressP3" />
+                <p>{t("ContactFormInfoAddressP1")}<br />
+                    {t("ContactFormInfoAddressP2")}<br />
+                    {t("ContactFormInfoAddressP3")}
                 </p>
             </div>
 
             <div className="contactin">
-                <h1><Text tid="Send a Message" /></h1>
+                <h1>{t("SendMessage1")}</h1>
+                <h1>{t("SendMessage2")}</h1>
                 <form>
                     <input required type="text" class="contactin-input" placeholder="Full Name / שם מלא" name="name" value={data.name} onChange={handleChange} />
                     <input required type="text" class="contactin-input" placeholder="Phone Number / מס' טלפון" name="phone" value={data.phone} onChange={handleChange} />

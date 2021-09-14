@@ -2,34 +2,38 @@ import React, { useContext } from 'react';
 import './App.css';
 
 //Rooms
-import Room1A from './assets/img/portfolio/Room1-1.jpeg';
-import Room1B from './assets/img/portfolio/Room1-2.jpg';
-import Room1C from './assets/img/portfolio/Room1-3.jpeg';
-import Room2A from './assets/img/portfolio/Room2A.jpg';
-import Room2B from './assets/img/portfolio/Room2B.jpg';
-import Room2C from './assets/img/portfolio/Room2C.jpg';
-import Room3A from './assets/img/portfolio/Room3A.jpg';
-import Room3B from './assets/img/portfolio/Room3B.jpg';
-import Room3C from './assets/img/portfolio/Room3C.jpeg';
+import Room1A from './assets/img/portfolio/Room1-1.webp';
+import Room1B from './assets/img/portfolio/Room1-2.webp';
+import Room1C from './assets/img/portfolio/Room1-3.webp';
+import Room2A from './assets/img/portfolio/Room2A.webp';
+import Room2B from './assets/img/portfolio/Room2B.webp';
+import Room2C from './assets/img/portfolio/Room2C.webp';
+import Room3A from './assets/img/portfolio/Room3A.webp';
+import Room3B from './assets/img/portfolio/Room3B.webp';
+import Room3C from './assets/img/portfolio/Room3C.webp';
 
 //Gallery
-import Gallery1 from './assets/img/portfolio/gallery1.jpeg';
-import Gallery2 from './assets/img/portfolio/gallery2.jpeg';
-import Gallery3 from './assets/img/portfolio/gallery3.jpeg';
-import Gallery4 from './assets/img/portfolio/gallery4.jpeg';
-import Gallery5 from './assets/img/portfolio/gallery5.jpg';
-import Gallery6 from './assets/img/portfolio/gallery6.jpeg';
+import Gallery1 from './assets/img/portfolio/gallery1.webp';
+import Gallery2 from './assets/img/portfolio/gallery2.webp';
+import Gallery3 from './assets/img/portfolio/gallery3.webp';
+import Gallery4 from './assets/img/portfolio/gallery4.webp';
+import Gallery5 from './assets/img/portfolio/gallery5.webp';
+import Gallery6 from './assets/img/portfolio/gallery6.webp';
 
 
 import logo from './assets/img/portfolio/logo.png';
 import ContactForm from './ContactForm';
-import LanguageSelector from './components/LanguageSelector';
 
-//Explore implement
-import { Text, LanguageContext } from './containers/Language';
+// Language Selector
+import './i18next';
+import { useTranslation } from "react-i18next";
+import { LangContext } from './LangContext';
+
+import { ToggleButtonGroup, ToggleButton } from '@material-ui/lab';
 
 export default function App() {
-    const { userLanguage } = useContext(LanguageContext);
+    const { t } = useTranslation();
+    const { currentLang, changeLanguage } = useContext(LangContext);
 
     return (
 
@@ -42,21 +46,27 @@ export default function App() {
                         {/* <a class="navbar-brand js-scroll-trigger" href="#page-top">Casa Vital</a> */}
 
                         <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                            <Text tid="MenuToggleBtn" /><i class="fas fa-bars"></i>
+                            {t("MenuToggleBtn")}<i class="fas fa-bars"></i>
                         </button>
-                        <div className={userLanguage === 'en' ? 'navbarEn' : 'navbarHeb'}>
+                        <div className={currentLang === 'en' ? 'navbarEn' : 'navbarHeb'}>
                             <div class="collapse navbar-collapse" id="navbarResponsive">
                                 <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#services"><Text tid="OurServicesNav" /></a></li>
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio"><Text tid="OurRoomsNav" /></a></li>
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#gallery"><Text tid="GalleryNav" /></a></li>
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about"><Text tid="AboutUsNav" /></a></li>
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"><Text tid="ContactUsNav" /></a></li>
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#services">{t("OurServicesNav")}</a></li>
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">{t("OurRoomsNav")}</a></li>
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#gallery">{t("GalleryNav")}</a></li>
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">{t("AboutUsNav")}</a></li>
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">{t("ContactUsNav")}</a></li>
                                 </ul>
                             </div>
 
                         </div>
-                        <LanguageSelector />
+                        <ToggleButtonGroup className="langBtn" onChange={() => changeLanguage('en')} aria-label="text formatting">
+                            <ToggleButton aria-label="languages">
+
+                                <span>{currentLang === 'עברית' ? <p>Eng</p> : <p>עברית</p>}</span>
+
+                            </ToggleButton>
+                        </ToggleButtonGroup>
 
                     </div>
                 </nav>
@@ -82,43 +92,43 @@ export default function App() {
 
                 <section id="services">
                     <div className="services">
-                        <h1><Text tid="OurServices" /></h1>
+                        <h1>{t("OurServices")}</h1>
                         <div className="cen">
 
                             <div className="service">
                                 <i class="fas fa-car-side"></i>
-                                <h2><Text tid="OurServicesH1" /></h2>
-                                <p><Text tid="OurServicesP1" /></p>
+                                <h2>{t("OurServicesH1")}</h2>
+                                <p>{t("OurServicesP1")}</p>
                             </div>
 
                             <div className="service">
                                 <i class="fas fa-globe-europe"></i>
-                                <h2><Text tid="OurServicesH2" /></h2>
-                                <p><Text tid="OurServicesP2" /></p>
+                                <h2>{t("OurServicesH2")}</h2>
+                                <p>{t("OurServicesP2")}</p>
                             </div>
 
                             <div className="service">
                                 <i class="fas fa-tshirt"></i>
-                                <h2><Text tid="OurServicesH3" /></h2>
-                                <p><Text tid="OurServicesP3" /></p>
+                                <h2>{t("OurServicesH3")}</h2>
+                                <p>{t("OurServicesP3")}</p>
                             </div>
 
                             <div className="service">
                                 <i class="fas fa-crop-alt"></i>
-                                <h2><Text tid="OurServicesH6" /></h2>
-                                <p><Text tid="OurServicesP6" /></p>
+                                <h2>{t("OurServicesH6")}</h2>
+                                <p>{t("OurServicesP6")}</p>
                             </div>
 
                             <div className="service">
                                 <i class="fas fa-map-marked-alt"></i>
-                                <h2><Text tid="OurServicesH5" /></h2>
-                                <p><Text tid="OurServicesP5" /></p>
+                                <h2>{t("OurServicesH5")}</h2>
+                                <p>{t("OurServicesP5")}</p>
                             </div>
 
                             <div className="service">
                                 <i class="fas fa-user-tie"></i>
-                                <h2><Text tid="OurServicesH4" /></h2>
-                                <p><Text tid="OurServicesP4" /></p>
+                                <h2>{t("OurServicesH4")}</h2>
+                                <p>{t("OurServicesP4")}</p>
                             </div>
                         </div>
                     </div>
@@ -130,7 +140,7 @@ export default function App() {
                 <section class="page-section portfolio" id="portfolio">
                     <div class="container">
                         <div class="ourrooms">
-                            <h1 class="ourroomsh1"><Text tid="OurRoomsNav" /></h1>
+                            <h1 class="ourroomsh1">{t("OurRoomsNav")}</h1>
                         </div>
 
 
@@ -173,7 +183,7 @@ export default function App() {
                 <section class="page-section portfolio" id="gallery">
                     <div class="container">
                         <div class="gallery">
-                            <h1><Text tid="GalleryNav" /></h1>
+                            <h1>{t("GalleryNav")}</h1>
                         </div>
 
                         <div class="divider-custom"></div>
@@ -243,17 +253,17 @@ export default function App() {
                     <div class="container">
                         {/* <!-- About Section Heading--> */}
                         <div class="about">
-                            <h1><Text tid="AboutUsNav" /></h1>
+                            <h1>{t("AboutUsNav")}</h1>
                         </div>
 
                         {/* <!-- About Section Content--> */}
                         <div class="row">
-                            <div className={userLanguage === 'en' ? 'EnAbout' : 'HebAbout'}>
-                                <p><Text tid="AboutInfo1" /> <br />
-                                    <Text tid="AboutInfo2" /> <br />
-                                    <Text tid="AboutInfo3" /> <br /><br />
+                            <div className={currentLang === 'en' ? 'EnAbout' : 'HebAbout'}>
+                                <p>{t("AboutInfo1")}<br />
+                                    {t("AboutInfo2")}<br />
+                                    {t("AboutInfo3")}<br /><br />
                                     <div className="AboutInfo4">
-                                        <Text tid="AboutInfo4" />
+                                        {t("AboutInfo4")}
                                     </div>
                                 </p>
                             </div>
@@ -264,7 +274,7 @@ export default function App() {
                 {/* <!-- Contact Section--> */}
                 <section class="page-section" id="contact">
                     <div class="contact-head">
-                        <h1><Text tid="ContactUsNav" /></h1>
+                        <h1>{t("ContactUsNav")}</h1>
                     </div>
                     <ContactForm />
                 </section>
@@ -274,18 +284,18 @@ export default function App() {
                         <div class="row">
                             {/* <!-- Footer Location--> */}
                             <div class="col-lg-4 mb-5 mb-lg-0">
-                                <h4 class="mb-1"><Text tid="FooterLeft1" /></h4>
+                                <h4 class="mb-1">{t("FooterLeft1")}</h4>
                                 <p class="lead mb-0">
-                                    <a href="#services"> <Text tid="FooterLeft2" /> </a> <br />
-                                    <a href="#portfolio"> <Text tid="FooterLeft3" /> </a> <br />
-                                    <a href="#gallery"> <Text tid="FooterLeft4" />  </a> <br />
-                                    <a href="#about"> <Text tid="FooterLeft5" /> </a> <br />
-                                    <a href="#contact"> <Text tid="FooterLeft6" /> </a>
+                                    <a href="#services"> {t("FooterLeft2")}</a> <br />
+                                    <a href="#portfolio"> {t("FooterLeft3")}</a> <br />
+                                    <a href="#gallery"> {t("FooterLeft4")}</a> <br />
+                                    <a href="#about"> {t("FooterLeft5")}</a> <br />
+                                    <a href="#contact"> {t("FooterLeft6")}</a>
                                 </p>
                             </div>
                             {/* <!-- Footer Social Icons--> */}
                             <div class="col-lg-4 mb-5 mb-lg-0">
-                                <h4 class="mb-2"><Text tid="FooterCenter" /></h4>
+                                <h4 class="mb-2">{t("FooterCenter")}</h4>
                                 <a class="btn btn-outline-light btn-social mx-1" href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i></a>
                                 <a class="btn btn-outline-light btn-social mx-1" href="https://he.airbnb.com/rooms/14049154?_set_bev_on_new_domain=1619006328_NzM2MGE3OGUwZWI2&source_impression_id=p3_1619006734_9ziCjMd5xGMk56aY&guests=1&adults=1" target="_blank" rel="noopener noreferrer"><i class="fab fa-airbnb"></i></a>
                                 <a class="btn btn-outline-light btn-social mx-1" href="https://www.tripadvisor.co.il/Hotel_Review-g1868435-d1912004-Reviews-Casa_de_Vital-Rehovot_Central_District.html" target="_blank" rel="noopener noreferrer"><i class="fab fa-tripadvisor"></i></a>
@@ -293,8 +303,8 @@ export default function App() {
                             </div>
                             {/* <!-- Footer About Text--> */}
                             <div class="col-lg-4">
-                                <h4 class="mb-1"><Text tid="FooterRight1" /></h4>
-                                <p class="lead mb-0"><Text tid="FooterRight2" />
+                                <h4 class="mb-1">{t("FooterRight1")}</h4>
+                                <p class="lead mb-0">{t("FooterRight2")}
                                 </p>
                             </div>
                         </div>
@@ -303,7 +313,7 @@ export default function App() {
                 {/* <!-- Copyright Section--> */}
                 <div class="copyright py-3 text-center text-white">
                     <div class="container">
-                        <small> <span class="AccessibilitySpan"> <Text tid="AccessibilityP" /></span>  <br />
+                        <small> <span class="AccessibilitySpan"> {t("AccessibilityP")}</span>  <br />
                             Copyright © NirArgil 2021 </small>
                     </div>
                 </div>
@@ -324,7 +334,7 @@ export default function App() {
                                     <div class="row justify-content-center">
                                         <div class="col-lg-12">
                                             {/* <!-- Portfolio Modal - Title--> */}
-                                            <h2 class="portfolio-modal-title text-secondary mb-3" id="portfolioModal1Label"><Text tid="RoomsHeadSingle" /></h2>
+                                            <h2 class="portfolio-modal-title text-secondary mb-3" id="portfolioModal1Label">{t("RoomsHeadSingle")}</h2>
                                             <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
                                                 <ol class="carousel-indicators">
                                                     <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
@@ -356,30 +366,30 @@ export default function App() {
                                             {/* <!-- Portfolio Modal - Image--> */}
                                             {/* <img class="img-fluid rounded mb-5" src={Room3} alt="Room photo" /> */}
                                             {/* <!-- Portfolio Modal - Text--> */}
-                                            <p class="mb-3"> <Text tid="RoomInfo1" /> </p>
+                                            <p class="mb-3"> {t("RoomInfo1")}</p>
                                             <div className="ulRoomLeft">
                                                 <ul >
-                                                    <li> <Text tid="RoomInfo1Li1" /> </li>
-                                                    <li> <Text tid="RoomInfo1Li2" /></li>
-                                                    <li> <Text tid="RoomInfo1Li3" /></li>
+                                                    <li> {t("RoomInfo1Li1")}</li>
+                                                    <li> {t("RoomInfo1Li2")}</li>
+                                                    <li> {t("RoomInfo1Li3")}</li>
 
                                                 </ul>
                                             </div>
 
                                             <div className="ulRoomCenter">
                                                 <ul >
-                                                    <li> <Text tid="RoomInfo1Li4" /></li>
-                                                    <li> <Text tid="RoomInfo1Li5" /></li>
-                                                    <li> <Text tid="RoomInfo1Li6" /></li>
+                                                    <li> {t("RoomInfo1Li4")}</li>
+                                                    <li> {t("RoomInfo1Li5")}</li>
+                                                    <li> {t("RoomInfo1Li6")}</li>
 
                                                 </ul>
                                             </div>
 
                                             <div className="ulRoomRight">
                                                 <ul >
-                                                    <li> <Text tid="RoomInfo1Li7" /></li>
-                                                    <li> <Text tid="RoomInfo1Li8" /></li>
-                                                    <li> <Text tid="RoomInfo1Li9" /></li>
+                                                    <li> {t("RoomInfo1Li7")}</li>
+                                                    <li> {t("RoomInfo1Li8")}</li>
+                                                    <li> {t("RoomInfo1Li9")}</li>
 
                                                 </ul>
                                             </div>
@@ -402,7 +412,7 @@ export default function App() {
                                     <div class="row justify-content-center">
                                         <div class="col-lg-12">
                                             {/* <!-- Portfolio Modal - Title--> */}
-                                            <h2 class="portfolio-modal-title text-secondary mb-3" id="portfolioModal1Label"><Text tid="RoomsHeadDeluxe" /></h2>
+                                            <h2 class="portfolio-modal-title text-secondary mb-3" id="portfolioModal1Label">{t("RoomsHeadDeluxe")}</h2>
                                             <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
                                                 <ol class="carousel-indicators">
                                                     <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
@@ -430,30 +440,30 @@ export default function App() {
                                                 </a>
                                             </div>
 
-                                            <p class="mb-3"> <Text tid="RoomInfo2" /> </p>
+                                            <p class="mb-3"> {t("RoomInfo2")}</p>
                                             <div className="ulRoomLeft">
                                                 <ul >
-                                                    <li> <Text tid="RoomInfo1Li1" /> </li>
-                                                    <li> <Text tid="RoomInfo1Li2" /></li>
-                                                    <li> <Text tid="RoomInfo1Li3" /></li>
+                                                    <li> {t("RoomInfo1Li1")}</li>
+                                                    <li> {t("RoomInfo1Li2")}</li>
+                                                    <li> {t("RoomInfo1Li3")}</li>
 
                                                 </ul>
                                             </div>
 
                                             <div className="ulRoomCenter">
                                                 <ul >
-                                                    <li> <Text tid="RoomInfo1Li4" /></li>
-                                                    <li> <Text tid="RoomInfo1Li5" /></li>
-                                                    <li> <Text tid="RoomInfo1Li6" /></li>
+                                                    <li> {t("RoomInfo1Li4")}</li>
+                                                    <li> {t("RoomInfo1Li5")}</li>
+                                                    <li> {t("RoomInfo1Li6")}</li>
 
                                                 </ul>
                                             </div>
 
                                             <div className="ulRoomRight">
                                                 <ul >
-                                                    <li> <Text tid="RoomInfo1Li7" /></li>
-                                                    <li> <Text tid="RoomInfo1Li8" /></li>
-                                                    <li> <Text tid="RoomInfo1Li9" /></li>
+                                                    <li> {t("RoomInfo1Li7")}</li>
+                                                    <li> {t("RoomInfo1Li8")}</li>
+                                                    <li> {t("RoomInfo1Li9")}</li>
 
                                                 </ul>
                                             </div>
@@ -476,7 +486,7 @@ export default function App() {
                                     <div class="row justify-content-center">
                                         <div class="col-lg-12">
                                             {/* <!-- Portfolio Modal - Title--> */}
-                                            <h2 class="portfolio-modal-title text-secondary mb-3" id="portfolioModal1Label"> <Text tid="RoomsHeadLuxury" /> </h2>
+                                            <h2 class="portfolio-modal-title text-secondary mb-3" id="portfolioModal1Label"> {t("RoomsHeadLuxury")}</h2>
                                             <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
                                                 <ol class="carousel-indicators">
                                                     <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
@@ -504,30 +514,30 @@ export default function App() {
                                                 </a>
                                             </div>
 
-                                            <p class="mb-3"> <Text tid="RoomInfo3" /> </p>
+                                            <p class="mb-3"> {t("RoomInfo3")}</p>
                                             <div className="ulRoomLeft">
                                                 <ul >
-                                                    <li> <Text tid="RoomInfo1Li1" /> </li>
-                                                    <li> <Text tid="RoomInfo1Li2" /></li>
-                                                    <li> <Text tid="RoomInfo1Li3" /></li>
+                                                    <li> {t("RoomInfo1Li1")}</li>
+                                                    <li> {t("RoomInfo1Li2")}</li>
+                                                    <li> {t("RoomInfo1Li3")}</li>
 
                                                 </ul>
                                             </div>
 
                                             <div className="ulRoomCenter">
                                                 <ul >
-                                                    <li> <Text tid="RoomInfo1Li4" /></li>
-                                                    <li> <Text tid="RoomInfo1Li5" /></li>
-                                                    <li> <Text tid="RoomInfo1Li6" /></li>
+                                                    <li> {t("RoomInfo1Li4")}</li>
+                                                    <li> {t("RoomInfo1Li5")}</li>
+                                                    <li> {t("RoomInfo1Li6")}</li>
 
                                                 </ul>
                                             </div>
 
                                             <div className="ulRoomRight">
                                                 <ul >
-                                                    <li> <Text tid="RoomInfo1Li7" /></li>
-                                                    <li> <Text tid="RoomInfo1Li8" /></li>
-                                                    <li> <Text tid="RoomInfo1Li9" /></li>
+                                                    <li> {t("RoomInfo1Li7")}</li>
+                                                    <li> {t("RoomInfo1Li8")}</li>
+                                                    <li> {t("RoomInfo1Li9")}</li>
 
                                                 </ul>
                                             </div>

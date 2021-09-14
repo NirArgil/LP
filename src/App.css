@@ -181,7 +181,7 @@ section {
 
 .contactin:nth-child(1) {
   flex: 30%;
-  background: url(./assets/img/portfolio/a.jpg);
+  background: url(./assets/img/portfolio/a.webp);
   color: #fff;
   background-size: cover;
 }
@@ -202,6 +202,15 @@ section {
   font-weight: 500;
   margin-bottom: 20px;
   margin-left: 100px;
+}
+
+.contactin:nth-child(2) h1{
+  font-size: 23px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 9px;
+  margin-left: 0 !important;
+  text-align: center
 }
 
 .contactin h2 {
@@ -7230,23 +7239,35 @@ header {
 
 .headerContent {
   margin-top: 50px;
+}
 
+.langBtn p{
+  font-size: 1rem;
+  margin: 0!important;
+  padding: 0 !important;
+  color: #95a5b5;
+}
 
+.MuiToggleButton-root {
+  border: 1px solid #8897a5 !important;
+  padding: 5px !important;
+}
+
+.MuiToggleButton-root:hover {
+  border: 1px solid #646e79 !important;
 }
 
 @media only screen and (max-width: 400px) {
   header {
     background-size: cover;
   }
-  
 }
 
 #about {
-  background-image: url(./assets/img/portfolio/about7.jpeg);
+  background-image: url(./assets/img/portfolio/about7.webp);
   background-size: cover;
   height: 750px;
 }
-
 
 .EnAbout { 
   width: 460px;
