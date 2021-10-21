@@ -23,10 +23,15 @@ exports.handler = function(event, context, callback) {
     }
     });
 
+    var mailList = [
+        process.env.REACT_APP_USER_NAME,
+        'ben.elm@gmail.com'
+    ];
+
     transporter.sendMail({
         from: "send@example.com",
-        to: process.env.REACT_APP_USER_NAME,
-        subject: `Casa de Vital Contact Form`,
+        to: mailList,
+        subject: `New message from Casa de Vital website`,
         html: `
             <h3>Email from ${data.name}, <br>
             Email: ${data.email}<h3>.
