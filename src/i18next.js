@@ -10,6 +10,8 @@ i18n
     resources: {
       en: {
         translations: {
+          "TitleOfWebsite": "Casa Vital",
+          "SubTitleOfWebsite": "Apartments hotel",
           "MenuToggleBtn": "Menu ",
           "OurServicesNav": "Services",
           "OurRoomsNav": "Rooms",
@@ -91,6 +93,8 @@ i18n
       },
       עברית: {
         translations: {
+          "TitleOfWebsite": "הבית של ויטל",
+          "SubTitleOfWebsite": "מלון דירות",
           "exploreHeader": "עברית",
           "welcomeDescription": "ברוכים הבאים",
           "clickMe": "תלחץ עכשיו",

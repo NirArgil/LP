@@ -81,9 +81,9 @@ export default function App() {
 
                 <header class="masthead bg-primary text-white text-center" id="HeadScroll">
                     <div class="container d-flex align-items-center flex-column" id="headerContent">
-                        <h1 class="masthead-heading text-capitalize mb-0">Casa Vital</h1>
+                        <h1 class="masthead-heading text-capitalize mb-0">{t("TitleOfWebsite")}Casa Vital</h1>
 
-                        <p class="masthead-subheading mb-0">Luxury Hospitality</p>
+                        <p class="masthead-subheading mb-0">{t("SubTitleOfWebsite")}</p>
 
                     </div>
                     <div>
