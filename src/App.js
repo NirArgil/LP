@@ -96,7 +96,7 @@ export default function App() {
                 </header>
 
                 {/* class="page-section bg-primary text-white mb-0" */}
-                <div class="py-5">
+                {/* <div class="py-5">
                     <div class="container">
                         <div class="row align-items-center">
                             
@@ -131,7 +131,7 @@ export default function App() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <section id="services">
                     <div className="services">
