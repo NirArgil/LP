@@ -34,7 +34,7 @@ exports.handler = function(event, context, callback) {
     transporter.sendMail({
         from: "send@example.com",
         to: mailList,
-        subject: `New message from Casa de Vital website`,
+        subject: `New message from Casa Vital website`,
         html: `
             <h3>Email from ${data.name}, <br>
             Email: ${data.email}<h3>.
