@@ -87,7 +87,7 @@ export default function App() {
 
                     </div>
                     <div>
-                        <a href="https://wa.me/972527026632" class="float" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
+                        <a href="https://wa.me/972505272382" class="float" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
                             <i class="fab fa-whatsapp my-float"></i>
                         </a>
 
