@@ -25,7 +25,9 @@ exports.handler = function(event, context, callback) {
 
     var mailList = [
         process.env.REACT_APP_USER_NAME,
-        'ben.elm@gmail.com'
+        'ben.elm@gmail.com',
+        'nissim168@gmail.com',
+        'vital23@netvision.net.il'
     ];
 
     transporter.sendMail({

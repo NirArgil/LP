@@ -21,12 +21,12 @@ import Gallery5 from './assets/img/portfolio/gallery5.webp';
 import Gallery6 from './assets/img/portfolio/gallery6.webp';
 
 //Icon section
-// import trivagoIcon from './assets/img/portfolio/trivago.png'
-// import bookingIcon from './assets/img/portfolio/booking.png'
-// import tripadvisorIcon from './assets/img/portfolio/tripadvisor.png'
-// import agodaIcon from './assets/img/portfolio/agoda.png'
-// import airbnbIcon from './assets/img/portfolio/airbnb.png'
-// import hotelsIcon from './assets/img/portfolio/hotels.png'
+import trivagoIcon from './assets/img/portfolio/trivago.png'
+import bookingIcon from './assets/img/portfolio/booking.png'
+import tripadvisorIcon from './assets/img/portfolio/tripadvisor.png'
+import agodaIcon from './assets/img/portfolio/agoda.png'
+import airbnbIcon from './assets/img/portfolio/airbnb.png'
+import hotelsIcon from './assets/img/portfolio/hotels.png'
 
 import logo from './assets/img/portfolio/logo.png';
 import ContactForm from './ContactForm';
@@ -96,7 +96,7 @@ export default function App() {
                 </header>
 
                 {/* class="page-section bg-primary text-white mb-0" */}
-                {/* <div class="py-5">
+                <div class="py-5">
                     <div class="container">
                         <div class="row align-items-center">
                             
@@ -131,7 +131,7 @@ export default function App() {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
 
                 <section id="services">
                     <div className="services">
