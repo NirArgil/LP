@@ -94,7 +94,7 @@ const ContactForm = () => {
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                 </span>
                 <h2>{t("ContactFormInfoEmail")}</h2>
-                <p>vital23@netvision.net.il</p>
+                <p>hotelrehovot@gmail.com</p>
                 <p>nissim168@gmail.com</p>
 
                 <span class="iContact">
