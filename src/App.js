@@ -85,6 +85,8 @@ export default function App() {
 
                         <p class="masthead-subheading mb-0">{t("SubTitleOfWebsite")}</p>
 
+                        <p class="masthead-subheading mb-0">050-5272382</p>
+
                     </div>
                     <div>
                         <a href="https://wa.me/972505272382" class="float" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
