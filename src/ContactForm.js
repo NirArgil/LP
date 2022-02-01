@@ -128,7 +128,7 @@ const ContactForm = () => {
                 <h1>{t("SendMessage2")}</h1>
                 <form name="Contactform">
                     <input required type="text" class="contactin-input" placeholder="Full Name / שם מלא" name="name" value={data.name} onChange={handleChange} />
-                    <input required type="text" class="contactin-input" placeholder="Phone Number / מס' טלפון" name="phoneNum" value={data.phone} onChange={handleChange} />
+                    <input required type="text" class="contactin-input" placeholder="Phone Number / מס' טלפון" name="phoneNum" value={data.phoneNum} onChange={handleChange} />
                     <input required type="text" class="contactin-input" placeholder="Email / דואר אלקטרוני" name="email" value={data.email} onChange={handleChange} />
                     <textarea class="contactin-textarea" name="message" placeholder="Message / הודעה" value={data.message} onChange={handleChange}></textarea>
                     <button type="submit" value="Submit" class="contactin-btn" onClick={formSubmit}>{data.buttonText}</button>
