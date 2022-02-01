@@ -11,8 +11,7 @@ const API_URL = `https://www.google.com/maps/embed/v1/place?q=place_id:ChIJn_CDN
 const ContactForm = () => {
     const { t } = useTranslation();
 
-    const [data, setData] = useState({ name: '', email: '', phone: '', message: '', sent: false, buttonText: `${t("buttonTextSendMsgFirst")}`, err: '' })
-
+    const [data, setData] = useState({ name: '', email: '', phoneNum: '', message: '', sent: false, buttonText: 'שליחה', err: '' })
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -22,60 +21,76 @@ const ContactForm = () => {
         })
     }
 
+    const mails = [
+        process.env.REACT_APP_USER_NAME,
+        'ben.elm@gmail.com',
+        'nissim168@gmail.com',
+        'vital23@netvision.net.il',
+        'hotelrehovot@gmail.com'
+    ];
+
     const formSubmit = (e) => {
         e.preventDefault();
 
-        setData({
-            ...data,
-            buttonText: `${t("buttonTextIsSending")}`
-        })
+        var x = document.forms["Contactform"]["name"].value;
+        var y = document.forms["Contactform"]["email"].value;
+        var z = document.forms["Contactform"]["message"].value;
+        var p = document.forms["Contactform"]["phoneNum"].value;
 
-        axios.post('/api/sendmail', data)
-            .then(res => {
-                if (res.data.result !== 'success') {
-                    setData({
-                        ...data,
-                        buttonText: `${t("buttonTextFailed")}`,
-                        sent: false,
-                        err: 'fail'
-                    })
-                    setTimeout(() => {
-                        resetForm()
-                    }, 6000)
-                } else {
-                    setData({
-                        ...data,
-                        sent: true,
-                        buttonText: `${t("buttonTextMsgSent")}`,
-                        err: 'success'
-                    })
-                    setTimeout(() => {
-                        resetForm();
-                    }, 6000)
-                }
-            }).catch((err) => {
+        if (x == "" || x == null || y == "" || y == null || z == "" || z == null || p == "" || p == null) {
+            setData({
+                ...data,
+                buttonText: 'חסרים נתונים,נא למלא את כל השדות',
+                sent: false,
+                err: 'fail'
+            })
+            setTimeout(() => {
+                resetForm()
+            }, 3000)
+        } else {
+            setData({
+                ...data,
+                buttonText: 'שולח'
+            })
+            // eslint-disable-next-line
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: process.env.REACT_APP_USER_NAME,
+                Password: process.env.REACT_APP_PASSWORD,
 
+                To: mails,
+                From: "landingpage@mailer.com",
+                Subject: "הודעה חדשה מהאתר החדש הבית של ויטל | קאסה ויטל",
+                Body: `
+            Email from: ${data.name}. <br />
+            Email Address: ${data.email}. <br />
+            Phone Number: ${data.phoneNum}. <br />
+            Message: ${data.message}.
+            `
+            }).then(
                 setData({
                     ...data,
-                    buttonText: `${t("buttonTextFailed")}`,
-                    err: 'fail'
+                    sent: true,
+                    buttonText: 'ההודעה נשלחה בהצלחה',
                 })
-            })
+            ).then(setTimeout(() => {
+                resetForm()
+            }, 5000)
+            );
+        }
     }
 
     const resetForm = () => {
         setData({
             name: '',
             email: '',
-            phone: '',
+            phoneNum: '',
             message: '',
             sent: false,
-            buttonText: 'Send Message',
+            buttonText: 'שליחה',
             err: ''
         });
     }
-
-
 
     return (
         <div className="contactwrap">
@@ -111,9 +126,9 @@ const ContactForm = () => {
             <div className="contactin">
                 <h1>{t("SendMessage1")}</h1>
                 <h1>{t("SendMessage2")}</h1>
-                <form>
+                <form name="Contactform">
                     <input required type="text" class="contactin-input" placeholder="Full Name / שם מלא" name="name" value={data.name} onChange={handleChange} />
-                    <input required type="text" class="contactin-input" placeholder="Phone Number / מס' טלפון" name="phone" value={data.phone} onChange={handleChange} />
+                    <input required type="text" class="contactin-input" placeholder="Phone Number / מס' טלפון" name="phoneNum" value={data.phone} onChange={handleChange} />
                     <input required type="text" class="contactin-input" placeholder="Email / דואר אלקטרוני" name="email" value={data.email} onChange={handleChange} />
                     <textarea class="contactin-textarea" name="message" placeholder="Message / הודעה" value={data.message} onChange={handleChange}></textarea>
                     <button type="submit" value="Submit" class="contactin-btn" onClick={formSubmit}>{data.buttonText}</button>
