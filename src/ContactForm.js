@@ -59,7 +59,7 @@ const ContactForm = () => {
                 Password: process.env.REACT_APP_PASSWORD,
 
                 To: mails,
-                From: "landingpage@mailer.com",
+                From: "casavital@mailer.com",
                 Subject: "הודעה חדשה מהאתר החדש הבית של ויטל | קאסה ויטל",
                 Body: `
             Email from: ${data.name}. <br />
