@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
 
 //Language Switcher
 import './i18next';
@@ -37,7 +37,7 @@ const ContactForm = () => {
         var z = document.forms["Contactform"]["message"].value;
         var p = document.forms["Contactform"]["phoneNum"].value;
 
-        if (x == "" || x == null || y == "" || y == null || z == "" || z == null || p == "" || p == null) {
+        if (x === "" || x == null || y === "" || y == null || z === "" || z == null || p === "" || p == null) {
             setData({
                 ...data,
                 buttonText: 'חסרים נתונים,נא למלא את כל השדות',
