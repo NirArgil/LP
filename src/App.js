@@ -96,16 +96,11 @@ export default function App() {
                             </span>
 
                             <span class="iContact">
-                                <a href="https://wa.me/972505272382" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
-                                    <i class="fab fa-whatsapp headFloat"></i>
+                                <a href="tel:+972505272382" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
+                                    <i class="fas fa-phone-alt headFloat"></i>
                                 </a>
                             </span>
                         </div>
-
-
-
-
-
 
                     </div>
 
