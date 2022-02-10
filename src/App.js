@@ -63,7 +63,7 @@ export default function App() {
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#gallery">{t("GalleryNav")}</a></li>
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">{t("AboutUsNav")}</a></li>
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">{t("ContactUsNav")}</a></li>
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://www.youtube.com/watch?v=gvbuaqhjj60&t=18s">{t("videoLink")}</a></li>
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://youtu.be/gvbuaqhjj60">{t("videoLink")}</a></li>
                                 </ul>
                             </div>
 
@@ -92,7 +92,8 @@ export default function App() {
 
                         <div>
                             <span class="iContact">
-                                <a href="mailto:hotelrehovot@gmail.com"> <i class="fa fa-envelope" aria-hidden="true"> </i></a>
+                             {/* eslint-disable-next-line */}
+                                <a href="mailto:hotelrehovot@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                             </span>
 
                             <span class="iContact">
