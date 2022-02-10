@@ -90,13 +90,12 @@ export default function App() {
 
                         <p class="masthead-subheading mb-0" id="specialprices">{t("specialprices")}</p>
 
-                        <div>
-                            <span class="iContact">
-                             {/* eslint-disable-next-line */}
-                                <a href="mailto:hotelrehovot@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        <div id="headContact">
+                            <span className="iContact">
+                                <a href="mailto:hotelrehovot@gmail.com"> <i class="fa fa-envelope" aria-hidden="true"> </i></a>
                             </span>
 
-                            <span class="iContact">
+                            <span className="iContact" id="phoneBtn">
                                 <a href="tel:+972505272382" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
                                     <i class="fas fa-phone-alt headFloat"></i>
                                 </a>

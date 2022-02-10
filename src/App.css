@@ -11746,6 +11746,17 @@ a.text-dark:focus {
     color: #ffa500;
     letter-spacing: 3px;
   }
+
+  
+}
+
+#phoneBtn {
+  margin-left: 27px;
+}
+
+#headContact {
+  float: left;
+  right: 250px;
 }
 
 .portfolio .portfolio-item {
