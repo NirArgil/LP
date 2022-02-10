@@ -63,6 +63,7 @@ export default function App() {
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#gallery">{t("GalleryNav")}</a></li>
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">{t("AboutUsNav")}</a></li>
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">{t("ContactUsNav")}</a></li>
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://www.youtube.com/watch?v=gvbuaqhjj60&t=18s">{t("videoLink")}</a></li>
                                 </ul>
                             </div>
 
@@ -83,11 +84,31 @@ export default function App() {
                     <div class="container d-flex align-items-center flex-column" id="headerContent">
                         <h1 class="masthead-heading text-capitalize mb-0">{t("TitleOfWebsite")}</h1>
 
-                        <p class="masthead-subheading mb-0">{t("SubTitleOfWebsite")}</p>
+                        <p class="masthead-subheading mb-0" id="subHeading">{t("SubTitleOfWebsite")}</p>
 
                         <p class="masthead-subheading mb-0">050-5272382</p>
 
+                        <p class="masthead-subheading mb-0" id="specialprices">{t("specialprices")}</p>
+
+                        <div>
+                            <span class="iContact">
+                                <a href="mailto:hotelrehovot@gmail.com"> <i class="fa fa-envelope" aria-hidden="true"> </i></a>
+                            </span>
+
+                            <span class="iContact">
+                                <a href="https://wa.me/972505272382" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
+                                    <i class="fab fa-whatsapp headFloat"></i>
+                                </a>
+                            </span>
+                        </div>
+
+
+
+
+
+
                     </div>
+
                     <div>
                         <a href="https://wa.me/972505272382" class="float" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
                             <i class="fab fa-whatsapp my-float"></i>
@@ -101,35 +122,35 @@ export default function App() {
                 <div class="py-5">
                     <div class="container">
                         <div class="row align-items-center">
-                            
+
                             <div class="col-md-2 col-sm-6 my-3">
-                                <a href="http://www.booking.com/Share-TM4hYQ" target="_blank" rel="noopener noreferrer">
-                                <img class="img-Fluid img-brand d-block mx-auto" src={bookingIcon} alt="bookingcom" /></a>
+                                <a href="http://www.booking.com/Share-QyCZZf" target="_blank" rel="noopener noreferrer">
+                                    <img class="img-Fluid img-brand d-block mx-auto" src={bookingIcon} alt="bookingcom" /></a>
                             </div>
 
                             <div class="col-md-2 col-sm-6 my-3">
                                 <a href="https://www.tripadvisor.co.il/Hotel_Review-g1868435-d1912004-Reviews-Casa_de_Vital-Rehovot_Central_District.html?m=19905" target="_blank" rel="noopener noreferrer">
-                                <img class="img-Fluid img-brand d-block mx-auto" src={tripadvisorIcon} alt="tripadvisor" /></a>
+                                    <img class="img-Fluid img-brand d-block mx-auto" src={tripadvisorIcon} alt="tripadvisor" /></a>
                             </div>
 
                             <div class="col-md-2 col-sm-6 my-3">
                                 <a href="https://www.trivago.co.il/רחובות-84890/hotel/הבית-של-ויטל-1375391" target="_blank" rel="noopener noreferrer">
-                                <img class="img-Fluid img-brand d-block mx-auto" src={trivagoIcon} alt="trivagoLink" /></a>
+                                    <img class="img-Fluid img-brand d-block mx-auto" src={trivagoIcon} alt="trivagoLink" /></a>
                             </div>
 
                             <div class="col-md-2 col-sm-6 my-3">
                                 <a href="https://www.agoda.com/casa-vital-boutique-hotel/hotel/rehovot-il.html" target="_blank" rel="noopener noreferrer">
-                                <img class="img-Fluid img-brand d-block mx-auto" src={agodaIcon} alt="agoda" /></a>
+                                    <img class="img-Fluid img-brand d-block mx-auto" src={agodaIcon} alt="agoda" /></a>
                             </div>
 
                             <div class="col-md-2 col-sm-6 my-3">
                                 <a href="https://he.airbnb.com/rooms/14049154" target="_blank" rel="noopener noreferrer">
-                                <img class="img-Fluid img-brand d-block mx-auto" src={airbnbIcon} alt="airbnb" /></a>
+                                    <img class="img-Fluid img-brand d-block mx-auto" src={airbnbIcon} alt="airbnb" /></a>
                             </div>
 
                             <div class="col-md-2 col-sm-6 my-3">
                                 <a href="https://www.hotelscombined.co.il" target="_blank" rel="noopener noreferrer">
-                                <img class="img-Fluid img-brand d-block mx-auto" src={hotelsIcon} alt="hotelsbutique" /></a>
+                                    <img class="img-Fluid img-brand d-block mx-auto" src={hotelsIcon} alt="hotelsbutique" /></a>
                             </div>
                         </div>
                     </div>
@@ -188,7 +209,6 @@ export default function App() {
                             <h1 class="ourroomsh1">{t("OurRoomsNav")}</h1>
                         </div>
 
-
                         <div class="divider-custom"></div>
 
                         {/* <!-- Portfolio Grid Items--> */}
@@ -197,7 +217,7 @@ export default function App() {
                             <div class="col-md-6 col-lg-4 mb-5">
                                 <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div class="portfolio-item-caption-content text-center text-white" id="features"> <p className="roomText"> Single Room</p> </div>
+                                        <div class="portfolio-item-caption-content text-center text-white" id="features"> <p className="roomText">{t("RoomsHeadSingle")}</p> </div>
                                     </div>
                                     <img class="img-fluid" src={Room1A} alt="HotelRoominRehovot" />
                                 </div>
@@ -206,7 +226,7 @@ export default function App() {
                             <div class="col-md-6 col-lg-4 mb-5">
                                 <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div class="portfolio-item-caption-content text-center text-white" id="features"><p className="roomText"> Deluxe Room</p> </div>
+                                        <div class="portfolio-item-caption-content text-center text-white" id="features"><p className="roomText">{t("RoomsHeadDeluxe")}</p> </div>
                                     </div>
                                     <img class="img-fluid" src={Room2A} alt="ApartmentsHotelinrehovot" />
                                 </div>
@@ -215,7 +235,7 @@ export default function App() {
                             <div class="col-md-6 col-lg-4 mb-5">
                                 <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div class="portfolio-item-caption-content text-center text-white" id="features"><p className="roomText"> Luxury Room</p> </div>
+                                        <div class="portfolio-item-caption-content text-center text-white" id="features"><p className="roomText">{t("RoomsHeadLuxury")}</p> </div>
                                     </div>
                                     <img class="img-fluid" src={Room3A} alt="Hotelroominrehovotisrael" />
                                 </div>
@@ -307,8 +327,9 @@ export default function App() {
                                 <p>{t("AboutInfo1")}<br />
                                     {t("AboutInfo2")}<br />
                                     {t("AboutInfo3")}<br /><br />
+                                    {t("AboutInfo4")}<br /><br />
                                     <div className="AboutInfo4">
-                                        {t("AboutInfo4")}
+                                        {t("AboutInfo5")}
                                     </div>
                                 </p>
                             </div>

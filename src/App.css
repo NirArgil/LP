@@ -234,7 +234,7 @@ section {
 }
 
 .iContact {
-  font-size: 16px;
+  font-size: 23px;
   width: 40px;
   height: 40px;
   margin-right: 10px;
@@ -244,6 +244,11 @@ section {
   line-height: 40px;
   text-align: center;
   display: inline-block;
+}
+
+.contactin p a {
+  text-decoration: none;
+  color: rgb(40, 43, 58);
 }
 
 .contactin p {
@@ -7271,16 +7276,16 @@ header {
   font-size: 1rem;
   margin: 0!important;
   padding: 0 !important;
-  color: #95a5b5;
+  color: orange;
 }
 
 .MuiToggleButton-root {
-  border: 1px solid #8897a5 !important;
+  border: 1px solid orange !important;
   padding: 5px !important;
 }
 
 .MuiToggleButton-root:hover {
-  border: 1px solid #646e79 !important;
+  border: 1px solid orange !important;
 }
 
 @media only screen and (max-width: 400px) {
@@ -11488,6 +11493,21 @@ a.text-dark:focus {
   z-index: 100;
 }
 
+.floatHeader {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  bottom: 40px;
+  left: 40px;
+  /* background-color: #25d366; */
+  color: #000;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
 .ScrollFeaturefloat {
   position: fixed;
   width: 52px;
@@ -11506,6 +11526,12 @@ a.text-dark:focus {
 }
 
 .my-float {
+  margin-bottom: 1px;
+  margin-left: 2px;
+}
+
+.headFloat {
+  font-size: 27px;
   margin-bottom: 1px;
   margin-left: 2px;
 }
@@ -11681,6 +11707,17 @@ a.text-dark:focus {
 
 .masthead .masthead-subheading {
   font-size: 1.25rem;
+  letter-spacing: 7px;
+  font-weight: bold;
+}
+
+#subHeading{
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+#specialprices{
+  color: #ffa500;
 }
 
 .masthead .masthead-avatar {
@@ -11696,10 +11733,18 @@ a.text-dark:focus {
   .masthead .masthead-heading {
     font-size: 4rem;
     line-height: 3.5rem;
+    
   }
 
   .masthead .masthead-subheading {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    letter-spacing: 7px;
+    font-weight: bold;
+  }
+
+  #specialprices{
+    color: #ffa500;
+    letter-spacing: 3px;
   }
 }
 

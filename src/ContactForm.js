@@ -109,8 +109,8 @@ const ContactForm = () => {
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                 </span>
                 <h2>{t("ContactFormInfoEmail")}</h2>
-                <p>hotelrehovot@gmail.com</p>
-                <p>nissim168@gmail.com</p>
+                <p><a href="mailto:hotelrehovot@gmail.com">hotelrehovot@gmail.com</a></p>   
+                <p><a href="mailto:nissim168@gmail.com">nissim168@gmail.com</a></p>
 
                 <span class="iContact">
                     <i class="fas fa-map-pin" aria-hidden="true"></i>
