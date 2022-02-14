@@ -63,7 +63,7 @@ export default function App() {
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#gallery">{t("GalleryNav")}</a></li>
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">{t("AboutUsNav")}</a></li>
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">{t("ContactUsNav")}</a></li>
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://youtu.be/gvbuaqhjj60">{t("videoLink")}</a></li>
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://youtu.be/gvbuaqhjj60?rel=0">{t("videoLink")}</a></li>
                                 </ul>
                             </div>
 
@@ -100,12 +100,18 @@ export default function App() {
                                     <i class="fas fa-phone-alt headFloat"></i>
                                 </a>
                             </span>
+
+                            <span className="iContact" id="phoneBtn">
+                                <a href="https://wa.me/972505272382" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
+                                <i class="fab fa-whatsapp WhatsAppFloat"></i>
+                                </a>
+                            </span>
                         </div>
 
                     </div>
 
                     <div>
-                        <a href="https://wa.me/972505272382" class="float" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
+                        <a href="https://wa.me/972505272382" className="float" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
                             <i class="fab fa-whatsapp my-float"></i>
                         </a>
 
