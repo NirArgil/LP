@@ -22,10 +22,10 @@ const ContactForm = () => {
     }
 
     const mails = [
-        process.env.REACT_APP_USER_NAME,
-        'ben.elm@gmail.com',
+        // process.env.REACT_APP_USER_NAME,
+        // 'ben.elm@gmail.com',
         'nissim168@gmail.com',
-        'vital23@netvision.net.il',
+        // 'vital23@netvision.net.il',
         'hotelrehovot@gmail.com'
     ];
 
