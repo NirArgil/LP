@@ -363,7 +363,7 @@ export default function App() {
                             {/* <!-- Footer Social Icons--> */}
                             <div class="col-lg-4 mb-5 mb-lg-0">
                                 <h4 class="mb-2">{t("FooterCenter")}</h4>
-                                <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/HotelCasaVital/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                                 {/* <a class="btn btn-outline-light btn-social mx-1" href="https://he.airbnb.com/rooms/14049154?_set_bev_on_new_domain=1619006328_NzM2MGE3OGUwZWI2&source_impression_id=p3_1619006734_9ziCjMd5xGMk56aY&guests=1&adults=1" target="_blank" rel="noopener noreferrer"><i class="fab fa-airbnb"></i></a> */}
                                 {/* <a class="btn btn-outline-light btn-social mx-1" href="https://www.tripadvisor.co.il/Hotel_Review-g1868435-d1912004-Reviews-Casa_de_Vital-Rehovot_Central_District.html" target="_blank" rel="noopener noreferrer"><i class="fab fa-tripadvisor"></i></a> */}
                             </div>
