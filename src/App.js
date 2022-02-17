@@ -47,13 +47,13 @@ export default function App() {
         <div className="body">
             <div id="page-top">
                 {/* <!-- Navigation--> */}
-                <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-                    <div class="container">
+                <nav className="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+                    <div className="container">
                         <a href="#page-top">  <img className="logo" src={logo} alt="Logo casa vital" /> </a>
                         {/* <a class="navbar-brand js-scroll-trigger" href="#page-top">Casa Vital</a> */}
 
                         <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                            {t("MenuToggleBtn")}<i class="fas fa-bars"></i>
+                            {t("MenuToggleBtn")}<i className="fas fa-bars"></i>
                         </button>
                         <div className={currentLang === 'en' ? 'navbarEn' : 'navbarHeb'}>
                             <div class="collapse navbar-collapse" id="navbarResponsive">
