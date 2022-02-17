@@ -1,12 +1,19 @@
+# <IfModule mod_rewrite.c>
+# RewriteEngine On
+# RewriteBase /
+# RewriteRule ^index\.html$ - [L]
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-l
+# RewriteCond %{HTTP_HOST} ^(www\.)?page.asp?page_id=9\.tld
+
+# RewriteRule . /index.html [L]
+# Redirect /https://www.casavital.co.il/page.asp?page_id=9 to /index.html
+# </IfModule>
+
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.html$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-l
-RewriteCond %{HTTP_HOST} ^(www\.)?page.asp?page_id=9\.tld
-
-RewriteRule . /index.html [L]
-
+   Options -MultiViews
+   RewriteEngine On
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteRule ^ index.html [QSA,L]
 </IfModule>
