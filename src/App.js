@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './App.css';
 
 //Rooms
@@ -40,8 +40,8 @@ import { ToggleButtonGroup, ToggleButton } from '@material-ui/lab';
 
 export default function App() {
     const { t } = useTranslation();
-    const { currentLang, changeLanguage } = useContext(LangContext);
-
+    const { currentLang, changeLanguage } = useContext(LangContext); 
+    
     return (
 
         <div className="body">
@@ -63,7 +63,7 @@ export default function App() {
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#gallery">{t("GalleryNav")}</a></li>
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">{t("AboutUsNav")}</a></li>
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">{t("ContactUsNav")}</a></li>
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://youtu.be/gvbuaqhjj60?rel=0">{t("videoLink")}</a></li>
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://www.youtube.com/watch?v=gvbuaqhjj60">{t("videoLink")}</a></li>
                                 </ul>
                             </div>
 
