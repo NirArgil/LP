@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import LangContextProvider from './LangContext';
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,18 +12,16 @@ import {
 } from "react-router-dom";
 
 ReactDOM.render(
-  <Router>
-    <LangContextProvider>
-      <React.StrictMode>
-
+  <LangContextProvider>
+    <React.StrictMode>
+      <Router>
         <Routes>
+        
           <Route path="/" element={<App />} />
-          <Route path="*" element={<Navigate to="/" />} />
+
         </Routes>
-
-      </React.StrictMode>
-    </LangContextProvider>
-
-  </Router>,
+      </Router>
+    </React.StrictMode>
+  </LangContextProvider>,
   document.getElementById('root')
 );

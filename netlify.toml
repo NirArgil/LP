@@ -4,3 +4,10 @@
     from = "/api/*"
     to = "/.netlify/functions/:splat"
     status = 200
+
+    [[redirects]]
+  from = "/https://hotelrehovot.com/asd"
+  to = "https://hotelrehovot.com"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
