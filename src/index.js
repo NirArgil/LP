@@ -14,13 +14,9 @@ import {
 ReactDOM.render(
   <LangContextProvider>
     <React.StrictMode>
-      <Router>
-        <Routes>
 
-          <Route path="/" element={<App />} />
+      <App />
 
-        </Routes>
-      </Router>
     </React.StrictMode>
   </LangContextProvider>,
   document.getElementById('root')
