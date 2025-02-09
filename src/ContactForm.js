@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-// import axios from 'axios';
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
+import "./i18next";
 
-//Language Switcher
-import './i18next';
 import { useTranslation } from "react-i18next";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -11,139 +10,169 @@ const API_URL = `https://www.google.com/maps/embed/v1/place?q=place_id:ChIJn_CDN
 const ContactForm = () => {
     const { t } = useTranslation();
 
-    const [data, setData] = useState({ name: '', email: '', phoneNum: '', message: '', sent: false, buttonText: 'שליחה', err: '' })
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phoneNum: "",
+        message: "",
+        sent: false,
+        buttonText: "שליחה",
+        err: "",
+    });
 
     const handleChange = (e) => {
-        const { name, value } = e.target
-        setData({
-            ...data,
-            [name]: value
-        })
-    }
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
 
-    const mails = [
-        // process.env.REACT_APP_USER_NAME,
-        // 'ben.elm@gmail.com',
-        'nissim168@gmail.com',
-        // 'vital23@netvision.net.il',
-        'hotelrehovot@gmail.com'
-    ];
+    const form = useRef();
 
-    const formSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        var x = document.forms["Contactform"]["name"].value;
-        var y = document.forms["Contactform"]["email"].value;
-        var z = document.forms["Contactform"]["message"].value;
-        var p = document.forms["Contactform"]["phoneNum"].value;
-
-        if (x === "" || x == null || y === "" || y == null || z === "" || z == null || p === "" || p == null) {
-            setData({
-                ...data,
-                buttonText: 'חסרים נתונים,נא למלא את כל השדות',
-                sent: false,
-                err: 'fail'
-            })
-            setTimeout(() => {
-                resetForm()
-            }, 3000)
-        } else {
-            setData({
-                ...data,
-                buttonText: 'שולח'
-            })
-            // eslint-disable-next-line
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: process.env.REACT_APP_USER_NAME,
-                Password: process.env.REACT_APP_PASSWORD,
-
-                To: mails,
-                From: "casavital@mailer.com",
-                Subject: "הודעה חדשה מהאתר החדש הבית של ויטל | קאסה ויטל",
-                Body: `
-            Email from: ${data.name}. <br />
-            Email Address: ${data.email}. <br />
-            Phone Number: ${data.phoneNum}. <br />
-            Message: ${data.message}.
-            `
-            }).then(
-                setData({
-                    ...data,
-                    sent: true,
-                    buttonText: 'ההודעה נשלחה בהצלחה',
-                })
-            ).then(setTimeout(() => {
-                resetForm()
-            }, 5000)
+        if (!formData.name || !formData.email || !formData.message || !formData.phoneNum) {
+            setFormData(
+                {
+                    ...formData,
+                    buttonText: "חסרים נתונים, נא למלא את כל השדות",
+                }
             );
+
+            setTimeout(() => {
+                resetForm();
+            }, 5000)
+
+            return;
         }
-    }
+
+        emailjs
+            .sendForm('service_z2okscm', 'template_lgwsjqe', form.current, {
+                publicKey: '4MV2xmtYwVMqp8OA_',
+            })
+            .then(
+                () => {
+                    setFormData({
+                        ...formData,
+                        sent: true,
+                        buttonText: "הודעתך נשלחה בהצלחה",
+                    })
+                },
+                (error) => {
+                    setFormData({
+                        ...formData,
+                        sent: false,
+                        buttonText: "שגיאה, לשלוח שוב!",
+                    })
+                },
+                setTimeout(() => {
+                    resetForm();
+                }, 5000)
+            );
+    };
 
     const resetForm = () => {
-        setData({
-            name: '',
-            email: '',
-            phoneNum: '',
-            message: '',
+        setFormData({
+            name: "",
+            email: "",
+            phoneNum: "",
+            message: "",
             sent: false,
-            buttonText: 'שליחה',
-            err: ''
+            buttonText: "שליחה",
+            err: "",
         });
-    }
+    };
 
     return (
         <div className="contactwrap">
             <div className="contactin">
                 <h1>{t("ContactFormInfo")}</h1>
 
-                <span class="iContact">
-                    <i class="fa fa-phone-alt" aria-hidden="true"></i>
+                <span className="iContact">
+                    <i className="fa fa-phone-alt" aria-hidden="true"></i>
                 </span>
                 <h2>{t("ContactFormInfoPhone")}</h2>
                 <p>050-5318406</p>
                 <p>050-5272382</p>
                 <p>052-7026632</p>
 
-                <span class="iContact">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span className="iContact">
+                    <i className="fa fa-envelope" aria-hidden="true"></i>
                 </span>
                 <h2>{t("ContactFormInfoEmail")}</h2>
-                <p><a href="mailto:hotelrehovot@gmail.com">hotelrehovot@gmail.com</a></p>   
-                <p><a href="mailto:nissim168@gmail.com">nissim168@gmail.com</a></p>
+                <p>
+                    <a href="mailto:hotelrehovot@gmail.com">hotelrehovot@gmail.com</a>
+                </p>
+                <p>
+                    <a href="mailto:nissim168@gmail.com">nissim168@gmail.com</a>
+                </p>
 
-                <span class="iContact">
-                    <i class="fas fa-map-pin" aria-hidden="true"></i>
+                <span className="iContact">
+                    <i className="fas fa-map-pin" aria-hidden="true"></i>
                 </span>
                 <h2>{t("ContactFormInfoAddress")}</h2>
 
-                <p>{t("ContactFormInfoAddressP1")}<br />
-                    {t("ContactFormInfoAddressP2")}<br />
-                    {t("ContactFormInfoAddressP3")}
-                </p>
+                <p>{t("ContactFormInfoAddressP1")}</p>
+                <p>{t("ContactFormInfoAddressP2")}</p>
+                <p>{t("ContactFormInfoAddressP3")}</p>
             </div>
 
             <div className="contactin">
                 <h1>{t("SendMessage1")}</h1>
                 <h1>{t("SendMessage2")}</h1>
-                <form name="Contactform">
-                    <input required type="text" class="contactin-input" placeholder="Full Name / שם מלא" name="name" value={data.name} onChange={handleChange} />
-                    <input required type="text" class="contactin-input" placeholder="Phone Number / מס' טלפון" name="phoneNum" value={data.phoneNum} onChange={handleChange} />
-                    <input required type="text" class="contactin-input" placeholder="Email / דואר אלקטרוני" name="email" value={data.email} onChange={handleChange} />
-                    <textarea class="contactin-textarea" name="message" placeholder="Message / הודעה" value={data.message} onChange={handleChange}></textarea>
-                    <button type="submit" value="Submit" class="contactin-btn" onClick={formSubmit}>{data.buttonText}</button>
+                <form name="Contactform" ref={form} onSubmit={handleSubmit}>
+                    <input
+                        required
+                        type="text"
+                        className="contactin-input"
+                        placeholder="Full Name / שם מלא"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                    />
+                    <input
+                        required
+                        type="text"
+                        className="contactin-input"
+                        placeholder="Phone Number / מס' טלפון"
+                        name="phoneNum"
+                        value={formData.phoneNum}
+                        onChange={handleChange}
+                    />
+                    <input
+                        required
+                        type="text"
+                        className="contactin-input"
+                        placeholder="Email / דואר אלקטרוני"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                    />
+                    <textarea
+                        className="contactin-textarea"
+                        name="message"
+                        placeholder="Message / הודעה"
+                        value={formData.message}
+                        onChange={handleChange}
+                    ></textarea>
+                    <button type="submit" value="Submit" className="contactin-btn">
+                        {formData.buttonText}
+                    </button>
                 </form>
             </div>
 
-
             <div className="contactin">
-                <iframe title="Gmaps" frameborder="0" loading="lazy" allowfullscreen width="100%" height="auto"
-                    src={API_URL} ></iframe>
+                <iframe
+                    title="Gmaps"
+                    frameBorder="0"
+                    loading="lazy"
+                    allowFullScreen
+                    width="100%"
+                    height="auto"
+                    src={API_URL}
+                ></iframe>
             </div>
-
-
-
-
         </div>
     );
 };

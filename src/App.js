@@ -32,10 +32,9 @@ import { ToggleButtonGroup, ToggleButton } from '@material-ui/lab';
 
 export default function App() {
     const { t } = useTranslation();
-    const { currentLang, changeLanguage } = useContext(LangContext); 
-    
+    const { currentLang, changeLanguage } = useContext(LangContext);
+
     return (
-       
         <div className="body">
             <div id="page-top">
                 {/* <!-- Navigation--> */}
@@ -95,7 +94,7 @@ export default function App() {
 
                             <span className="iContact" id="phoneBtn">
                                 <a href="https://wa.me/972505272382" target="_blank" rel="noopener noreferrer" alt="WhatsApptogetcasavitalisrael">
-                                <i class="fab fa-whatsapp WhatsAppFloat"></i>
+                                    <i class="fab fa-whatsapp WhatsAppFloat"></i>
                                 </a>
                             </span>
                         </div>
@@ -381,7 +380,7 @@ export default function App() {
                 </div> */}
                 {/* <!-- Portfolio Modals--> */}
                 {/* <!-- Portfolio Modal 1--> */}
-                <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+                <div class="portfolio-modal modal fade" id="portfolioModal1" tabIndex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -459,7 +458,7 @@ export default function App() {
                     </div>
                 </div>
                 {/* <!-- Portfolio Modal 2--> */}
-                <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+                <div class="portfolio-modal modal fade" id="portfolioModal2" tabIndex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -533,7 +532,7 @@ export default function App() {
                     </div>
                 </div>
                 {/* <!-- Portfolio Modal 3--> */}
-                <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+                <div class="portfolio-modal modal fade" id="portfolioModal3" tabIndex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -609,7 +608,7 @@ export default function App() {
                 </div>
 
                 {/* <!-- Gallery Modal 1--> */}
-                <div class="portfolio-modal modal fade" id="galleryModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+                <div class="portfolio-modal modal fade" id="galleryModal1" tabIndex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -638,7 +637,7 @@ export default function App() {
                     </div>
                 </div>
                 {/* <!-- Gallery Modal 2--> */}
-                <div class="portfolio-modal modal fade" id="galleryModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+                <div class="portfolio-modal modal fade" id="galleryModal2" tabIndex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -668,7 +667,7 @@ export default function App() {
                 </div>
 
                 {/* <!-- Gallery Modal 3--> */}
-                <div class="portfolio-modal modal fade" id="galleryModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+                <div class="portfolio-modal modal fade" id="galleryModal3" tabIndex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -698,7 +697,7 @@ export default function App() {
                 </div>
 
                 {/* <!-- Gallery Modal 4--> */}
-                <div class="portfolio-modal modal fade" id="galleryModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+                <div class="portfolio-modal modal fade" id="galleryModal4" tabIndex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -727,7 +726,7 @@ export default function App() {
                     </div>
                 </div>
                 {/* <!-- Gallery Modal 5--> */}
-                <div class="portfolio-modal modal fade" id="galleryModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+                <div class="portfolio-modal modal fade" id="galleryModal5" tabIndex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -756,7 +755,7 @@ export default function App() {
                     </div>
                 </div>
                 {/* <!-- Gallery Modal 6--> */}
-                <div class="portfolio-modal modal fade" id="galleryModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+                <div class="portfolio-modal modal fade" id="galleryModal6" tabIndex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -787,7 +786,7 @@ export default function App() {
 
             </div>
         </div>
-       
+
 
     );
 }
