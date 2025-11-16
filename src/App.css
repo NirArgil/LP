@@ -11634,7 +11634,8 @@ a.text-dark:focus {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
-  color: #95a5b5;
+  color: orange;
+  font-weight: 700;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
@@ -11888,7 +11889,7 @@ form .row:first-child .floating-label-form-group {
  color: #fff;
 }
 
-.AccessibilitySpan:after {
+/* .AccessibilitySpan:after {
   content: "";
   display: block;
   margin: 0 auto;
@@ -11897,8 +11898,9 @@ form .row:first-child .floating-label-form-group {
   padding: 0;
   margin-bottom: -23px;
   margin-top: 3px;
-}
+} */
 
-.copyright {
+.accessibility {
   background-color: #1a252f;
+  height: 57px;
 }

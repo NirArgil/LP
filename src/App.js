@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import './App.css';
 
 //Rooms
@@ -43,11 +43,8 @@ export default function App() {
                         <a href="#page-top">  <img className="logo" src={logo} alt="Logo casa vital" /> </a>
                         {/* <a class="navbar-brand js-scroll-trigger" href="#page-top">Casa Vital</a> */}
 
-                        <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                            {t("MenuToggleBtn")}<i className="fas fa-bars"></i>
-                        </button>
                         <div className={currentLang === 'en' ? 'navbarEn' : 'navbarHeb'}>
-                            <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <div class="collapse navbar-collapse">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#services">{t("OurServicesNav")}</a></li>
                                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">{t("OurRoomsNav")}</a></li>
@@ -368,11 +365,8 @@ export default function App() {
                     </div>
                 </footer>
                 {/* <!-- Copyright Section--> */}
-                <div class="copyright py-3 text-center text-white">
-                    <div class="container">
-                        <small> <span class="AccessibilitySpan"> {t("AccessibilityP")}</span>  <br />
-                            Copyright © NirArgil 2021 </small>
-                    </div>
+                <div class="accessibility py-3 text-center text-white">
+                    <small><span class="AccessibilitySpan"> {t("AccessibilityP")}</span></small>
                 </div>
                 {/* <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)--> */}
                 {/* <div class="scroll-to-top d-lg-none position-fixed">
