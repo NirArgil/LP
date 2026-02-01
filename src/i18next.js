@@ -25,14 +25,6 @@ i18n
 
           "SendMessage1": "Send us a message NOW,", 
           "SendMessage2": "We'll contact you as soon as possible.", 
-          "ContactFormInfo": "Contact Info",
-          "ContactFormInfoPhone": "Phone",
-          "ContactFormInfoEmail": "Email",
-          "ContactFormInfoAddress": "Address",
-
-          "ContactFormInfoAddressP1": "Herzel St. 168,",
-          "ContactFormInfoAddressP2": "Rehovot,",
-          "ContactFormInfoAddressP3": "Israel.",
 
           "Send a Message": "Send a Message",
           "buttonTextSendMsgFirst": "Send a Message",
@@ -116,21 +108,12 @@ i18n
         
           "SendMessage1": ",שילחו הודעה עכשיו", 
           "SendMessage2": ".ניצור איתכם קשר בהקדם האפשרי", 
-          "ContactFormInfo": "פרטים נוספים",
-          "ContactFormInfoPhone": "טלפון",
-          "ContactFormInfoEmail": "אימייל",
-          "ContactFormInfoAddress": "כתובתנו",
-        
-          "ContactFormInfoAddressP1": ",רחוב הרצל 168",
-          "ContactFormInfoAddressP2": ",רחובות",
-          "ContactFormInfoAddressP3": ".ישראל",
-        
+          
           "buttonTextSendMsgFirst": "שלח",
           "buttonTextSendMsg": "שלח",
           "buttonTextIsSending": "...שולח",
           "buttonTextFailed": "שגיאה, לחצ/י שוב",
           "buttonTextMsgSent": ".נשלח בהצלחה",
-        
         
           "OurServicesH1": "איסוף והחזרה משדה התעופה",
           "OurServicesH2": "מלון דירות",

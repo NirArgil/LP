@@ -21,7 +21,6 @@ import Gallery5 from './assets/img/portfolio/gallery5.webp';
 import Gallery6 from './assets/img/portfolio/gallery6.webp';
 
 import logo from './assets/img/portfolio/logo.png';
-import ContactForm from './ContactForm';
 
 // Language Selector
 import './i18next';
