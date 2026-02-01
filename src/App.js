@@ -37,37 +37,18 @@ export default function App() {
     return (
         <div className="body">
             <div id="page-top">
-                {/* <!-- Navigation--> */}
                 <nav className="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
                     <div className="container">
                         <a href="#page-top">  <img className="logo" src={logo} alt="Logo casa vital" /> </a>
-                        {/* <a class="navbar-brand js-scroll-trigger" href="#page-top">Casa Vital</a> */}
-
-                        <div className={currentLang === 'en' ? 'navbarEn' : 'navbarHeb'}>
-                            <div class="collapse navbar-collapse">
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#services">{t("OurServicesNav")}</a></li>
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">{t("OurRoomsNav")}</a></li>
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#gallery">{t("GalleryNav")}</a></li>
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">{t("AboutUsNav")}</a></li>
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">{t("ContactUsNav")}</a></li>
-                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://www.youtube.com/watch?v=gvbuaqhjj60">{t("videoLink")}</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
+                     
                         <ToggleButtonGroup className="langBtn" onChange={() => changeLanguage('en')} aria-label="text formatting">
                             <ToggleButton aria-label="languages">
-
                                 <span>{currentLang === 'עברית' ? <p>Eng</p> : <p>עברית</p>}</span>
-
                             </ToggleButton>
                         </ToggleButtonGroup>
 
                     </div>
                 </nav>
-                {/* <!-- Masthead--> */}
-
                 <header class="masthead bg-primary text-white text-center" id="HeadScroll">
                     <div class="container d-flex align-items-center flex-column" id="headerContent">
                         <h1 class="masthead-heading text-capitalize mb-0">{t("TitleOfWebsite")}</h1>
@@ -105,44 +86,6 @@ export default function App() {
                     </div>
 
                 </header>
-
-                {/* class="page-section bg-primary text-white mb-0" */}
-                {/* <div class="py-5">
-                    <div class="container">
-                        <div class="row align-items-center">
-
-                            <div class="col-md-2 col-sm-6 my-3">
-                                <a href="http://www.booking.com/Share-QyCZZf" target="_blank" rel="noopener noreferrer">
-                                    <img class="img-Fluid img-brand d-block mx-auto" src={bookingIcon} alt="bookingcom" /></a>
-                            </div>
-
-                            <div class="col-md-2 col-sm-6 my-3">
-                                <a href="https://www.tripadvisor.co.il/Hotel_Review-g1868435-d1912004-Reviews-Casa_de_Vital-Rehovot_Central_District.html?m=19905" target="_blank" rel="noopener noreferrer">
-                                    <img class="img-Fluid img-brand d-block mx-auto" src={tripadvisorIcon} alt="tripadvisor" /></a>
-                            </div>
-
-                            <div class="col-md-2 col-sm-6 my-3">
-                                <a href="https://www.trivago.co.il/רחובות-84890/hotel/הבית-של-ויטל-1375391" target="_blank" rel="noopener noreferrer">
-                                    <img class="img-Fluid img-brand d-block mx-auto" src={trivagoIcon} alt="trivagoLink" /></a>
-                            </div>
-
-                            <div class="col-md-2 col-sm-6 my-3">
-                                <a href="https://www.agoda.com/casa-vital-boutique-hotel/hotel/rehovot-il.html" target="_blank" rel="noopener noreferrer">
-                                    <img class="img-Fluid img-brand d-block mx-auto" src={agodaIcon} alt="agoda" /></a>
-                            </div>
-
-                            <div class="col-md-2 col-sm-6 my-3">
-                                <a href="https://he.airbnb.com/rooms/14049154" target="_blank" rel="noopener noreferrer">
-                                    <img class="img-Fluid img-brand d-block mx-auto" src={airbnbIcon} alt="airbnb" /></a>
-                            </div>
-
-                            <div class="col-md-2 col-sm-6 my-3">
-                                <a href="https://www.hotelscombined.co.il" target="_blank" rel="noopener noreferrer">
-                                    <img class="img-Fluid img-brand d-block mx-auto" src={hotelsIcon} alt="hotelsbutique" /></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
 
                 <section id="services">
                     <div className="services">
@@ -325,13 +268,7 @@ export default function App() {
 
                     </div>
                 </section>
-                {/* <!-- Contact Section--> */}
-                <section class="page-section" id="contact">
-                    <div class="contact-head">
-                        <h1>{t("ContactUsNav")}</h1>
-                    </div>
-                    <ContactForm />
-                </section>
+                
                 {/* <!-- Footer--> */}
                 <footer class="footer text-center">
                     <div class="container">
@@ -344,15 +281,12 @@ export default function App() {
                                     <a href="#portfolio"> {t("FooterLeft3")}</a> <br />
                                     <a href="#gallery"> {t("FooterLeft4")}</a> <br />
                                     <a href="#about"> {t("FooterLeft5")}</a> <br />
-                                    <a href="#contact"> {t("FooterLeft6")}</a>
                                 </p>
                             </div>
                             {/* <!-- Footer Social Icons--> */}
                             <div class="col-lg-4 mb-5 mb-lg-0">
                                 <h4 class="mb-2">{t("FooterCenter")}</h4>
                                 <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/HotelCasaVital/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                                {/* <a class="btn btn-outline-light btn-social mx-1" href="https://he.airbnb.com/rooms/14049154?_set_bev_on_new_domain=1619006328_NzM2MGE3OGUwZWI2&source_impression_id=p3_1619006734_9ziCjMd5xGMk56aY&guests=1&adults=1" target="_blank" rel="noopener noreferrer"><i class="fab fa-airbnb"></i></a> */}
-                                {/* <a class="btn btn-outline-light btn-social mx-1" href="https://www.tripadvisor.co.il/Hotel_Review-g1868435-d1912004-Reviews-Casa_de_Vital-Rehovot_Central_District.html" target="_blank" rel="noopener noreferrer"><i class="fab fa-tripadvisor"></i></a> */}
                             </div>
                             {/* <!-- Footer About Text--> */}
                             <div class="col-lg-4">
@@ -367,12 +301,7 @@ export default function App() {
                 <div class="accessibility py-3 text-center text-white">
                     <small><span class="AccessibilitySpan"> {t("AccessibilityP")}</span></small>
                 </div>
-                {/* <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)--> */}
-                {/* <div class="scroll-to-top d-lg-none position-fixed">
-                    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
-                </div> */}
-                {/* <!-- Portfolio Modals--> */}
-                {/* <!-- Portfolio Modal 1--> */}
+               
                 <div class="portfolio-modal modal fade" id="portfolioModal1" tabIndex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
